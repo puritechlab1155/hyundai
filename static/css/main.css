@@ -1,24 +1,10 @@
 /* 공통 스타일 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* {margin: 0;padding: 0; box-sizing: border-box;}
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-family: 'Pretendard', sans-serif;
-    line-height: 1.6;
-}
-
+html, body {margin: 0;padding: 0;width: 100%;font-family: 'Pretendard', sans-serif;line-height: 1.6;}
 body {
-    /* 페이지가 항상 전체 화면을 차지하도록 */
-    display: flex;
-    flex-direction: column;
-    /* min-height: 100vh; */
-
+   /*페이지가 항상 전체 화면을 차지하도록 */
+   display: flex;flex-direction: column;
 }
 
 /* header */
@@ -39,7 +25,6 @@ header nav ul li a:hover {font-weight: 700; }
 header nav ul li a {text-decoration: none;color: black;font-size: 20px;}
 
 /* header dropdown */
-
 header .mobile-menu {display: none;}
 header .dropdown-content {
     display: none;
@@ -60,6 +45,11 @@ header .dropdown-content a {
 
 header .dropdown-content a:hover {background-color: #f1f1f1;}
 header .dropdown-content.show {display: flex;}
+
+/* header 메인에서만 로고 보이도록__기본적으로 모바일 요소를 숨김 */
+header .logo {display: none;}
+/* 특정 페이지에서만 모바일 요소를 표시 */
+body[data-page="hyundai_art"] .logo{display: block;}
 
 
 /* footer pc*/
@@ -107,7 +97,6 @@ main {
     width: 100%;
 }
 
-
 /* video */
 main .video-container {
     position: relative;
@@ -153,7 +142,7 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
 /* 반응형 스타일 */
 @media (max-width: 768px) {
     header {width: 100%;height: 76px; padding: 24px;}
-    header .logo { margin-left: 24px; display: none;}
+    header .logo { margin-left: 24px; display: none; margin-left: 0;}
     header .logo img{ width: 172px; height: 32px;}
 
     /* header nav ul {display: none;} */
