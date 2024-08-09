@@ -17,7 +17,8 @@ header {
     height:  108px;
 }
 header .header-back {display: none;}
-header .logo {font-size: 24px;font-weight: bold; margin-left: 80px;}
+
+header .logo {font-size: 24px;font-weight: bold; margin-left: 80px; display: block;}
 header nav { height: auto; margin-right: 104px;}
 header nav ul {display: flex;list-style: none; margin: 0; padding: 0;}
 header nav ul li {margin-right: 40px; }
@@ -46,10 +47,6 @@ header .dropdown-content a {
 header .dropdown-content a:hover {background-color: #f1f1f1;}
 header .dropdown-content.show {display: flex;}
 
-/* header 메인에서만 로고 보이도록__기본적으로 모바일 요소를 숨김 */
-header .logo {display: none;}
-/* 특정 페이지에서만 모바일 요소를 표시 */
-body[data-page="hyundai_art"] .logo{display: block;}
 
 
 /* footer pc*/
@@ -141,8 +138,9 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
 
 /* 반응형 스타일 */
 @media (max-width: 768px) {
+
     header {width: 100%;height: 76px; padding: 24px;}
-    header .logo { margin-left: 24px; display: none; margin-left: 0;}
+    header .logo { margin-left: 24px;  margin-left: 0;}
     header .logo img{ width: 172px; height: 32px;}
 
     /* header nav ul {display: none;} */
@@ -288,9 +286,12 @@ footer {height: 377px;}
 /* .header-pc { display: none;}
 .header-mo { display: block; padding: 0;} */
 
+/* works에서만 표시 */
+.header-pc { display: none;}
+.header-mo { display: block;}
 .header-mo .page-header { padding: 16px; display: flex; gap: 10px;}
-header .header-back {  display: flex; justify-content: center; align-items: center;}
-header .header-back img { width: 20px; height: 20px; }
+.header-back { display: block !important; }
+.header-back img {  display: block;  margin: 8px; }
 
 .header-mo .header-search { display: flex;
     border-radius: 25px;
@@ -330,7 +331,7 @@ header .header-back img { width: 20px; height: 20px; }
     margin: 0;
     padding: 0;
     list-style: none;
-    min-width: 700px;
+    min-width: 600px;
     white-space: nowrap;       /* 텍스트 줄바꿈 방지 */
 }
 
