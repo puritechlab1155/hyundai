@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현대아트컴</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css-main/styles.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+
+    <header class="header-pc">
+        <div class="logo"><a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a></div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li class="dropdown">
+                    <a href="#works" id="works-button">WORKS</a>
+                    <div class="dropdown-content">
+                        <a href="#">ALL TYPE</a>
+                        <a href="#">MAGAZINE</a>
+                        <a href="#">EDITORIAL</a>
+                        <a href="#">GOODS</a>
+                        <a href="#">PROMOTION</a>
+                        <a href="#">INFORMATION</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <header class="header-mo">
+        <div class="page-header">
+            <div class="header-back">
+                <a href="hyundai_art.html"><img src="images/common/arrow-left.png" alt="Back"></a>
+            </div>
+
+            <div class="header-search">
+                <input type="text" placeholder="검색" id="search-input">
+                <button class="page-search" id="search-button">
+                    <img src="images/common/Search.png" alt="Search">
+                </button>
+            </div>
+
+            <!-- <div class="menu-icon" id="menu-icon">
+                <a href="menu.html">&#9776;</a>
+            </div> -->
+        </div>
+
+        <!-- 카테고리 메뉴 추가 -->
+        <div class="category-menu-wrapper">
+            <ul class="category-menu">
+                <li><a href="#">ALL</a></li>
+                <li><a href="#">MAGAZINE</a></li>
+                <li><a href="#">EDITORIAL</a></li>
+                <li><a href="#">GOODS</a></li>
+                <li><a href="#">PROMOTION</a></li>
+                <li><a href="#">INFORMATION</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="wrapper"><!--wrapper -->
+        
+        <main>
+            <!-- 각 페이지의 메인 콘텐츠 -->
+            <section id="container" class="contact">
+                <div class="contents">
+                    <div class="main_copy">
+                        <span class="text01"><em class="mtxt">안녕하세요,</em><em class="line"></em></span><br>
+                        <span class="text02"><em class="mtxt">현대아트닷컴입니다.</em><em class="line"></em></span>
+                    </div>
+                    <div class="section01">
+                        <div class="cont01">
+                            <div class="title">본사</div>
+                            <div class="info_box">
+                                <div class="info info01">서울시 중구 을지로3가 114-10, 상지빌딩 502호</div>
+                                <div class="info info02">T. 02-2266-4482</div>
+                                <div class="map_btn">
+                                    <a href="#">
+                                        <div class="inner">
+                                            <span>지도보기</span>
+                                            <em><img src="images/contact/arrow-right-orange.svg" alt=""></em>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="info info03">F. 02-2265-4482</div>
+                                <div class="info info04">E. abc@abc.com</div>
+                            </div>
+                            <div class="sns_group">
+                                <ul>
+                                    <li><img src="images/contact/icon-instagram.svg" alt=""></li>
+                                    <li><img src="images/contact/icon-youtube.svg" alt=""></li>
+                                </ul>
+                            </div>
+                        </div><!-- //cont01 -->
+        
+                        <div class="cont02">
+                            <div class="box01">
+                                <div class="title">제 1공장</div>
+                                <div class="info_box">
+                                    <div class="info info01">서울시 중구 을지로3가 344-17</div>
+                                    <div class="info info02">T. 02-2278-2182</div>
+                                    <div class="map_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>지도보기</span>
+                                                <em><img src="images/contact/arrow-right-orange.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="box02">
+                                <div class="title">제 2공장</div>
+                                <div class="info_box">
+                                    <div class="info info01">서울시 중구 을지로3가 320-8</div>
+                                    <div class="info info02">T. 02-2275-4481</div>
+                                    <div class="map_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>지도보기</span>
+                                                <em><img src="images/contact/arrow-right-orange.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- //cont02 -->
+                    </div><!-- //section01 -->
+        
+                    <div class="section02">
+                        <div class="title_area">
+                            <div class="title">프로젝트 의뢰하기</div>
+                            <p>
+                                아래 양식에 맞게 작성해주시면 자세히 검토 후, 빠른 시일내에 연락드리겠습니다.<br>
+                                감사합니다.
+                            </p>
+                        </div>
+                        <div class="conts_box">
+                            <div class="cont01">
+                                <div class="form_area">
+                                    <div class="name_box">
+                                        <label for="name_info" class="stxt">회사/이름/직위</label>
+                                        <input type="text" placeholder="NAME" name="name_info" id="name_info">
+                                    </div>
+                                    <div class="tel_box">
+                                        <label for="tel_info" class="stxt">연락처</label>
+                                        <input type="tel" placeholder="PHONE NUMBER" name="tel_info" id="tel_info">
+                                    </div>
+                                    <div class="mail_box">
+                                        <label for="mail_info" class="stxt">이메일</label>
+                                        <input type="email" placeholder="E-MAIL" name="mail_info" id="mail_info">
+                                    </div>
+                                    <div class="link_box">
+                                        <label for="url_info" class="stxt">URL</label>
+                                        <input type="text" placeholder="있는 경우 입력해주세요" name="url_info" id="url_info">
+                                    </div>
+                                </div>
+                            </div><!-- //cont01 -->
+        
+                            <div class="cont02">
+                                <div class="form_area">
+                                    <div class="budget_box">
+                                        <div class="stxt">프로젝트 예산</div>
+                                        <ul>
+                                            <li>
+                                                <input type="radio" name="budget" id="bud_opt01" value="less500">
+                                                <label for="bud_opt01">500만원 이하</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="budget" id="bud_opt02" value="over500">
+                                                <label for="bud_opt02">500만원 이상</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="budget" id="bud_opt03" value="1000">
+                                                <label for="bud_opt03">1,000만원 이상</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="budget" id="bud_opt04" value="2000">
+                                                <label for="bud_opt04">2,000만원 이상</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="budget" id="bud_opt05" value="bud_other">
+                                                <label for="bud_opt05">기타</label>
+                                            </li>
+                                        </ul>
+                                    </div><!-- //budget_box -->
+        
+                                    <div class="schedule_box">
+                                        <div class="stxt">프로젝트 일정</div>
+                                        <ul>
+                                            <li>
+                                                <input type="radio" name="schedule" id="sch_opt01" value="2weeks">
+                                                <label for="sch_opt01">2주 이내</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="schedule" id="sch_opt02" value="1month">
+                                                <label for="sch_opt02">1개월 이내</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="schedule" id="sch_opt03" value="2month">
+                                                <label for="sch_opt03">1~2개월 이내</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="schedule" id="sch_opt04" value="4month">
+                                                <label for="sch_opt04">3~4개월 이내</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="schedule" id="sch_opt05" value="sch_other">
+                                                <label for="sch_opt05">기타</label>
+                                            </li>
+                                        </ul>
+                                    </div><!-- //schedule_box -->
+        
+                                    <div class="proj_conts">
+                                        <div class="stxt">프로젝트 내용</div>
+                                        <textarea name="pj_conts" id="pj_txts" placeholder="프로젝트에 대해 최대한 상세한 설명을 작성해주세요."></textarea>
+                                    </div>
+        
+                                    <div class="submit_btn">
+                                        <button type="button">
+                                            <span>제출하기</span>
+                                            <em><img src="images/common/arrow-right.svg" alt=""></em>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div><!-- //cont02 -->
+                        </div>
+                    </div><!-- //section02 -->
+                </div>
+            </section>
+          
+        </main>
+
+    </div><!--wrapper -->
+
+    <!-- footer.html -->
+<footer>
+    <div class="footer-content-pc">
+        <div class="company-info">
+            <span>(주)현대아트닷컴</span><br>
+            <p>대표이사 강순옥</p>
+            <p>사업자등록번호 202-81-60001</p>
+            <p>COPYRIGHT © HYUNDAIARTCOM.</p>
+        </div>
+        <div>
+            <img src="images/common/footer-logo.png" alt="">
+        </div>
+        <div class="office-info">
+            <span>OFFICE</span><br>
+            <p>서울시 종로구 삼봉로3길 114-10 (수송동 37), 현대빌딩 502호</p>
+            <p>T. 02-2273-4482 F. 02-2268-4482 E. sd4428@hanmail.net</p>
+        </div>
+        <div class="social-info">
+            <span>SOCIAL</span><br>
+            <p>YOUTUBE</p>
+            <p>INSTAGRAM</p>
+        </div>
+        <div class="contact-us">
+            <a href=""><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+        </div>
+    </div>
+
+    <div class="footer-content-mobile">
+        <div class="company-info">
+            <span>(주)현대아트닷컴</span>
+            <p style="white-space: pre;">대표이사 강순옥           사업자등록번호 202-81-60001</p>
+            <img src="images/common/footer-logo.png" alt="">
+        </div>
+        <div class="office-info">
+            <span>OFFICE</span>
+            <p>서울시 종로구 삼봉로3길 114-10 (수송동 37), 현대빌딩 502호</p>
+            <p>T. 02-2273-4482 F. 02-2268-4482 </p>
+            <p>E. sd4428@hanmail.net</p>
+        </div>
+        <div class="social-info">
+            <span>SOCIAL</span>
+            <p>YOUTUBE</p>
+            <p>INSTAGRAM</p>
+        </div>
+        <div class="copy-right">
+            <p>COPYRIGHT © HYUNDAIARTCOM.</p>
+        </div>
+        <div class="contact-us">
+            <a href="contact.html"><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+        </div>
+        <div class="footer-box" id="footer-box">
+            <img src="images/common/arrow-up-from-line.png" alt="화살표" class="arrow-image">
+        </div>
+    </div>
+
+</footer>
+
+
+</body>
+</html>
