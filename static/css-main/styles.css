@@ -161,7 +161,8 @@
 .work_detail .contents .side_info .share_btn a .inner { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; }
 .work_detail .contents .side_info .share_btn a .inner span { font-weight: 500; font-size: 16px; }
 
-.work_detail .contents .main_conts { margin: 183px auto 40px; display: flex; flex-direction: column; gap: 200px; padding: 0 30px; }
+.work_detail .contents .main_conts { margin: 150px auto 40px; display: flex; flex-direction: column; gap: 200px; padding: 0 30px; }
+.work_detail .contents .main_conts article .close { text-align: right; margin-bottom: 20px; color: #101010; }
 .work_detail .contents .main_conts article img { width: 100%; }
 
 @media only all and (max-width: 767px) {
