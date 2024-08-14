@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css-main/styles.css">
     <script defer src="js/main.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body data-page="works">
 
@@ -71,85 +74,1367 @@
         <main>
             <!-- 각 페이지의 메인 콘텐츠 -->
             <section id="container" class="work-list">
-                <div class="type_btns mobile_display">
-                    <div class="on">all</div>
-                    <div>magazine</div>
-                    <div>editorial</div>
-                    <div>goods</div>
-                    <div>promotion</div>
-                    <div>information</div>
-                </div>
-                <script>
-                    $('.type_btns div').click(function(){
-                        $(this).addClass('on');
-                        $(this).siblings().removeClass('on');
-                    });
-                </script>
-        
                 <div class="cont_wrap">
-                    <ul>
+                    <ul class="list_page01">
                         <li>
-                            <a href="#">
-                                <img src="images/work-list/cover_img1.png" alt="">
+                            <a>
+                                <div class="img_box"><img src="thumnail_images/magazine/seoulshinbo/num5_thumb.jpg" alt=""></div>
+                                <div class="text_box">
+                                    <div class="text01">2019</div>
+                                    <div class="text02">(초&middot;중등) 발명교육 백서</div>
+                                    <div class="text03">한국발명진흥회</div>
+                                </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="images/work-list/cover_img1.png" alt="">
+                            <a>
+                                <div class="img_box"><img src="thumnail_images/magazine/seoulshinbo/num6_thumb.jpg" alt=""></div>
+                                <div class="text_box">
+                                    <div class="text01">2019</div>
+                                    <div class="text02">(초&middot;중등) 발명교육 백서</div>
+                                    <div class="text03">한국발명진흥회</div>
+                                </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="images/work-list/cover_img1.png" alt="">
+                            <a>
+                                <div class="img_box"><img src="thumnail_images/magazine/seoulshinbo/num7_thumb.jpg" alt=""></div>
+                                <div class="text_box">
+                                    <div class="text01">2019</div>
+                                    <div class="text02">(초&middot;중등) 발명교육 백서</div>
+                                    <div class="text03">한국발명진흥회</div>
+                                </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="images/work-list/cover_img1.png" alt="">
+                            <a>
+                                <div class="img_box"><img src="thumnail_images/magazine/seoulshinbo/num8_thumb.jpg" alt=""></div>
+                                <div class="text_box">
+                                    <div class="text01">2019</div>
+                                    <div class="text02">(초&middot;중등) 발명교육 백서</div>
+                                    <div class="text03">한국발명진흥회</div>
+                                </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="images/work-list/cover_img1.png" alt="">
+                            <a>
+                                <div class="img_box"><img src="thumnail_images/magazine/komir/komir-thumb03+04.jpg" alt=""></div>
+                                <div class="text_box">
+                                    <div class="text01">2019</div>
+                                    <div class="text02">(초&middot;중등) 발명교육 백서</div>
+                                    <div class="text03">한국발명진흥회</div>
+                                </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="images/work-list/cover_img1.png" alt="">
+                            <a>
+                                <div class="img_box"><img src="thumnail_images/magazine/komir/komir-thumb05+06.jpg" alt=""></div>
+                                <div class="text_box">
+                                    <div class="text01">2019</div>
+                                    <div class="text02">(초&middot;중등) 발명교육 백서</div>
+                                    <div class="text03">한국발명진흥회</div>
+                                </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="images/work-list/cover_img1.png" alt="">
+                            <a>
+                                <div class="img_box"><img src="thumnail_images/magazine/komir/komir-thumb07+08.jpg" alt=""></div>
+                                <div class="text_box">
+                                    <div class="text01">2019</div>
+                                    <div class="text02">(초&middot;중등) 발명교육 백서</div>
+                                    <div class="text03">한국발명진흥회</div>
+                                </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="images/work-list/cover_img1.png" alt="">
+                            <a>
+                                <div class="img_box"><img src="thumnail_images/magazine/komir/komir-thumb09+10.jpg" alt=""></div>
+                                <div class="text_box">
+                                    <div class="text01">2019</div>
+                                    <div class="text02">(초&middot;중등) 발명교육 백서</div>
+                                    <div class="text03">한국발명진흥회</div>
+                                </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="images/work-list/cover_img1.png" alt="">
+                            <a>
+                                <div class="img_box"><img src="thumnail_images/magazine/komir/komir-thumb11+12.jpg" alt=""></div>
+                                <div class="text_box">
+                                    <div class="text01">2019</div>
+                                    <div class="text02">(초&middot;중등) 발명교육 백서</div>
+                                    <div class="text03">한국발명진흥회</div>
+                                </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="images/work-list/cover_img1.png" alt="">
+                            <a>
+                                <div class="img_box"><img src="thumnail_images/magazine/komir/komir-thumb24y-01+02.jpg" alt=""></div>
+                                <div class="text_box">
+                                    <div class="text01">2019</div>
+                                    <div class="text02">(초&middot;중등) 발명교육 백서</div>
+                                    <div class="text03">한국발명진흥회</div>
+                                </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="images/work-list/cover_img1.png" alt="">
+                            <a>
+                                <div class="img_box"><img src="thumnail_images/magazine/kipa/kipa-thumb23y-1+2.jpg" alt=""></div>
+                                <div class="text_box">
+                                    <div class="text01">2019</div>
+                                    <div class="text02">(초&middot;중등) 발명교육 백서</div>
+                                    <div class="text03">한국발명진흥회</div>
+                                </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="images/work-list/cover_img1.png" alt="">
+                            <a>
+                                <div class="img_box"><img src="thumnail_images/magazine/kipa/kipa-thumb23y-3+4.jpg" alt=""></div>
+                                <div class="text_box">
+                                    <div class="text01">2019</div>
+                                    <div class="text02">(초&middot;중등) 발명교육 백서</div>
+                                    <div class="text03">한국발명진흥회</div>
+                                </div>
                             </a>
                         </li>
                     </ul>
                 </div>
+
+                <div class="pagenation">
+                    <ul>
+                        <li class="arrow"><a href="works_all_type.html">&lt;&lt;</a></li>
+                        <li class="arrow"><a href="works_all_type.html">&lt;</a></li>
+                        <li class="on"><a href="works_all_type.html">1</a></li>
+                        <li><a href="works_all_type02.html">2</a></li>
+                        <li><a href="works_all_type03.html">3</a></li>
+                        <li><a href="works_all_type04.html">4</a></li>
+                        <li class="arrow"><a href="works_all_type02.html">&gt;</a></li>
+                        <li class="arrow"><a href="works_all_type04.html">&gt;&gt;</a></li>
+                    </ul>
+                </div>
+
+                <div class="top_btn">
+                    <button onclick="topFunction()"><i class="fa-solid fa-chevron-up"></i></button>
+                    <script>
+                        function topFunction() {
+                            window.scrollTo({
+                                top: 0, 
+                                behavior: 'smooth' // 부드러운 스크롤
+                            });
+                        }
+                    </script>
+                </div>
+
+                <div class="work_detail">
+                    <ul class="detail_list">
+                        <li>
+                            <div class="contents">
+                                <div class="side_info pc_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">
+                                            magazine
+                                        </div>
+                                        <div class="title">
+                                            2019<br>
+                                            (초중등)발명교육 백서
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text">
+                                        한국발명진흥회
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //side_info //pc_display -->
+                    
+                                <div class="side_info mobile_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">magazine</div>
+                                        <div class="title">Standard ITS</div>
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                                </div><!-- //side_info -->
+                    
+                                <div class="main_conts">
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                    </article>
+                                </div><!-- //main_conts -->
+                    
+                                <div class="text_area mobile_display">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //text_area -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contents">
+                                <div class="side_info pc_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">
+                                            magazine
+                                        </div>
+                                        <div class="title">
+                                            2019<br>
+                                            (초중등)발명교육 백서
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text">
+                                        한국발명진흥회
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //side_info //pc_display -->
+                    
+                                <div class="side_info mobile_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">magazine</div>
+                                        <div class="title">Standard ITS</div>
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                                </div><!-- //side_info -->
+                    
+                                <div class="main_conts">
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                    </article>
+                                </div><!-- //main_conts -->
+                    
+                                <div class="text_area mobile_display">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //text_area -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contents">
+                                <div class="side_info pc_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">
+                                            magazine
+                                        </div>
+                                        <div class="title">
+                                            2019<br>
+                                            (초중등)발명교육 백서
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text">
+                                        한국발명진흥회
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //side_info //pc_display -->
+                    
+                                <div class="side_info mobile_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">magazine</div>
+                                        <div class="title">Standard ITS</div>
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                                </div><!-- //side_info -->
+                    
+                                <div class="main_conts">
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                    </article>
+                                </div><!-- //main_conts -->
+                    
+                                <div class="text_area mobile_display">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //text_area -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contents">
+                                <div class="side_info pc_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">
+                                            magazine
+                                        </div>
+                                        <div class="title">
+                                            2019<br>
+                                            (초중등)발명교육 백서
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text">
+                                        한국발명진흥회
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //side_info //pc_display -->
+                    
+                                <div class="side_info mobile_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">magazine</div>
+                                        <div class="title">Standard ITS</div>
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                                </div><!-- //side_info -->
+                    
+                                <div class="main_conts">
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                    </article>
+                                </div><!-- //main_conts -->
+                    
+                                <div class="text_area mobile_display">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //text_area -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contents">
+                                <div class="side_info pc_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">
+                                            magazine
+                                        </div>
+                                        <div class="title">
+                                            2019<br>
+                                            (초중등)발명교육 백서
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text">
+                                        한국발명진흥회
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //side_info //pc_display -->
+                    
+                                <div class="side_info mobile_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">magazine</div>
+                                        <div class="title">Standard ITS</div>
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                                </div><!-- //side_info -->
+                    
+                                <div class="main_conts">
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                    </article>
+                                </div><!-- //main_conts -->
+                    
+                                <div class="text_area mobile_display">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //text_area -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contents">
+                                <div class="side_info pc_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">
+                                            magazine
+                                        </div>
+                                        <div class="title">
+                                            2019<br>
+                                            (초중등)발명교육 백서
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text">
+                                        한국발명진흥회
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //side_info //pc_display -->
+                    
+                                <div class="side_info mobile_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">magazine</div>
+                                        <div class="title">Standard ITS</div>
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                                </div><!-- //side_info -->
+                    
+                                <div class="main_conts">
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                    </article>
+                                </div><!-- //main_conts -->
+                    
+                                <div class="text_area mobile_display">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //text_area -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contents">
+                                <div class="side_info pc_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">
+                                            magazine
+                                        </div>
+                                        <div class="title">
+                                            2019<br>
+                                            (초중등)발명교육 백서
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text">
+                                        한국발명진흥회
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //side_info //pc_display -->
+                    
+                                <div class="side_info mobile_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">magazine</div>
+                                        <div class="title">Standard ITS</div>
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                                </div><!-- //side_info -->
+                    
+                                <div class="main_conts">
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                    </article>
+                                </div><!-- //main_conts -->
+                    
+                                <div class="text_area mobile_display">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //text_area -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contents">
+                                <div class="side_info pc_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">
+                                            magazine
+                                        </div>
+                                        <div class="title">
+                                            2019<br>
+                                            (초중등)발명교육 백서
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text">
+                                        한국발명진흥회
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //side_info //pc_display -->
+                    
+                                <div class="side_info mobile_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">magazine</div>
+                                        <div class="title">Standard ITS</div>
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                                </div><!-- //side_info -->
+                    
+                                <div class="main_conts">
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                    </article>
+                                </div><!-- //main_conts -->
+                    
+                                <div class="text_area mobile_display">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //text_area -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contents">
+                                <div class="side_info pc_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">
+                                            magazine
+                                        </div>
+                                        <div class="title">
+                                            2019<br>
+                                            (초중등)발명교육 백서
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text">
+                                        한국발명진흥회
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //side_info //pc_display -->
+                    
+                                <div class="side_info mobile_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">magazine</div>
+                                        <div class="title">Standard ITS</div>
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                                </div><!-- //side_info -->
+                    
+                                <div class="main_conts">
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                    </article>
+                                </div><!-- //main_conts -->
+                    
+                                <div class="text_area mobile_display">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //text_area -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contents">
+                                <div class="side_info pc_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">
+                                            magazine
+                                        </div>
+                                        <div class="title">
+                                            2019<br>
+                                            (초중등)발명교육 백서
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text">
+                                        한국발명진흥회
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //side_info //pc_display -->
+                    
+                                <div class="side_info mobile_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">magazine</div>
+                                        <div class="title">Standard ITS</div>
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                                </div><!-- //side_info -->
+                    
+                                <div class="main_conts">
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                    </article>
+                                </div><!-- //main_conts -->
+                    
+                                <div class="text_area mobile_display">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //text_area -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contents">
+                                <div class="side_info pc_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">
+                                            magazine
+                                        </div>
+                                        <div class="title">
+                                            2019<br>
+                                            (초중등)발명교육 백서
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text">
+                                        한국발명진흥회
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //side_info //pc_display -->
+                    
+                                <div class="side_info mobile_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">magazine</div>
+                                        <div class="title">Standard ITS</div>
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                                </div><!-- //side_info -->
+                    
+                                <div class="main_conts">
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                    </article>
+                                </div><!-- //main_conts -->
+                    
+                                <div class="text_area mobile_display">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //text_area -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contents">
+                                <div class="side_info pc_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">
+                                            magazine
+                                        </div>
+                                        <div class="title">
+                                            2019<br>
+                                            (초중등)발명교육 백서
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text">
+                                        한국발명진흥회
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //side_info //pc_display -->
+                    
+                                <div class="side_info mobile_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">magazine</div>
+                                        <div class="title">Standard ITS</div>
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                                </div><!-- //side_info -->
+                    
+                                <div class="main_conts">
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                    </article>
+                                </div><!-- //main_conts -->
+                    
+                                <div class="text_area mobile_display">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //text_area -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contents">
+                                <div class="side_info pc_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">
+                                            magazine
+                                        </div>
+                                        <div class="title">
+                                            2019<br>
+                                            (초중등)발명교육 백서
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text">
+                                        한국발명진흥회
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //side_info //pc_display -->
+                    
+                                <div class="side_info mobile_display">
+                                    <div class="title_box">
+                                        <div class="text_orange">magazine</div>
+                                        <div class="title">Standard ITS</div>
+                                    </div>
+                    
+                                    <div class="info_box">
+                                        <div class="info info1">
+                                            <span>date</span>
+                                            <em>2023 3+4</em>
+                                        </div>
+                                        <div class="info info2">
+                                            <span>client</span>
+                                            <em>ITS KOREA</em>
+                                        </div>
+                                        <div class="info info3">
+                                            <span>spec</span>
+                                            <em>150*299, 모조지, 블링블링</em>
+                                        </div>
+                                    </div>
+                                </div><!-- //side_info -->
+                    
+                                <div class="main_conts">
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                    </article>
+                                    <article class="art art01">
+                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                    </article>
+                                </div><!-- //main_conts -->
+                    
+                                <div class="text_area mobile_display">
+                                    <div class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                                    </div>
+                    
+                                    <div class="share_btn">
+                                        <a href="#">
+                                            <div class="inner">
+                                                <span>공유하기</span>
+                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><!-- //text_area -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <script>
+                    $('.work_detail ul li').hide();
+
+                    $('.cont_wrap ul li').click(function(){
+                        var idx = $(this).index();
+
+                        $('.work_detail ul li').eq(idx).show();
+                        $('.work_detail ul li').eq(idx).siblings().hide();
+                    });
+                </script>
             </section>
         </main>
 
@@ -185,7 +1470,7 @@
     <div class="footer-content-mobile">
         <div class="company-info">
             <span>(주)현대아트닷컴</span>
-            <p style="white-space: pre;">대표이사 강순옥           사업자등록번호 202-81-60001</p>
+            <p style="display: flex; gap: 20px; font-size: 12px; color: #707070;"><span>대표이사 강순옥</span><span>사업자등록번호 202-81-60001</span></p>
             <img src="images/common/footer-logo.png" alt="">
         </div>
         <div class="office-info">
