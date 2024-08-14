@@ -123,6 +123,12 @@
 .work-list .cont_wrap ul li a { display: block; }
 .work-list .cont_wrap ul li a img { width: 100%; }
 
+.work-list .pagenation { margin-top: 50px; }
+.work-list .pagenation ul { display: flex; justify-content: center; gap: 10px; }
+.work-list .pagenation ul li { font-family: 'Pretendard', sans-serif; font-weight: 400; font-size: 14px; color: #aaa; }
+.work-list .pagenation ul li.on { color: #000; }
+.work-list .pagenation ul .arrow { padding: 0 3px; }
+
 @media only all and (max-width: 767px) {
     .work-list .type_btns { display: flex; gap: 32px; font-family: 'Pretendard'; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; word-break: keep-all; }
     .work-list .type_btns div { padding: 16px 0; text-transform: uppercase; font-weight: 400; font-size: 14px; line-height: 130%; transition: all 0.3s; }
