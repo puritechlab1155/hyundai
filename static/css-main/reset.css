@@ -25,10 +25,7 @@ time, mark, audio, video {
 	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
 body {
 	line-height: 1;
 }
@@ -49,6 +46,6 @@ table {
 }
 
 a { color: unset; text-decoration: none; }
-img { max-width: 100%; display: block; }
+img { border: 0; }
 button { border: none; background-color: transparent; }
 input { outline: none; }
