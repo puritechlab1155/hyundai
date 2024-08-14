@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css-main/styles.css">
     <script defer src="js/main.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body data-page="works">
 
@@ -207,6 +209,18 @@
                         <li class="arrow"><a href="works_all_type02.html">&gt;</a></li>
                         <li class="arrow"><a href="works_all_type04.html">&gt;&gt;</a></li>
                     </ul>
+                </div>
+
+                <div class="top_btn">
+                    <button onclick="topFunction()"><i class="fa-solid fa-chevron-up"></i></button>
+                    <script>
+                        function topFunction() {
+                            window.scrollTo({
+                                top: 0, 
+                                behavior: 'smooth' // 부드러운 스크롤
+                            });
+                        }
+                    </script>
                 </div>
             </section>
         </main>
