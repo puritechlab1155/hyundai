@@ -130,7 +130,7 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 190px 41px;
+    margin: 0px;
 }
 
 .header-mo {display: none;}

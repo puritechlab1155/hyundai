@@ -36,46 +36,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //웹 메뉴바 드롭다운
-    const worksButton = document.getElementById('works-button');
-    const dropdownContent = document.querySelector('.dropdown-content');
+const worksButton = document.getElementById('works-button');
+const dropdownContent = document.querySelector('.dropdown-content');
 
-    worksButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        dropdownContent.classList.toggle('show');
-    });
+worksButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    dropdownContent.classList.toggle('show');
+});
 
-    document.addEventListener('click', function(event) {
-        if (!event.target.matches('#works-button')) {
-            if (dropdownContent.classList.contains('show')) {
-                dropdownContent.classList.remove('show');
-            }
+document.addEventListener('click', function(event) {
+    if (!event.target.matches('#works-button')) {
+        if (dropdownContent.classList.contains('show')) {
+            dropdownContent.classList.remove('show');
         }
-    });
+    }
+});
 
 //모바일 메뉴바 드록다운
 document.addEventListener('DOMContentLoaded', function() {
-    const menuIcon = document.getElementById('menu-icon');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const closeIcon = document.getElementById('close-icon');
+const menuIcon = document.getElementById('menu-icon');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeIcon = document.getElementById('close-icon');
 
-    menuIcon.addEventListener('click', function() {
-        mobileMenu.classList.add('show');
-    });
-
-    closeIcon.addEventListener('click', function() {
-        mobileMenu.classList.remove('show');
-    });
-
-    const searchButton = document.getElementById('search-button');
-    const searchInput = document.getElementById('search-input');
-
-    searchButton.addEventListener('click', function() {
-        const query = searchInput.value;
-        if (query) {
-            window.location.href = `search.html?q=${encodeURIComponent(query)}`;
-        }
-    });
+menuIcon.addEventListener('click', function() {
+    mobileMenu.classList.add('show');
 });
+
+closeIcon.addEventListener('click', function() {
+    mobileMenu.classList.remove('show');
+});
+
+const searchButton = document.getElementById('search-button');
+const searchInput = document.getElementById('search-input');
+
+searchButton.addEventListener('click', function() {
+    const query = searchInput.value;
+    if (query) {
+        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    }
+});
+});
+
 
 // footer.html을 로드하고, 콘텐츠를 추가한 후, 스크롤 이벤트 리스너를 추가
 //스크롤 이벤트를 감지하여 특정 지점에 도달했을 때 보이도록
