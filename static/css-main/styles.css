@@ -117,10 +117,11 @@
 }
 
 /* work-list */
-.work-list .cont_wrap ul { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; }
-.work-list .cont_wrap ul li { width: calc(25% - 8px); background: #fafafa; }
-.work-list .cont_wrap ul li a { display: flex; justify-content: center; padding: 40px 0; box-sizing: border-box; }
-.work-list .cont_wrap ul li a img { width: 100%; max-width: 205px; }
+.work-list { padding-top: 120px; padding-bottom: 40px; }
+.work-list .cont_wrap ul { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-start; }
+.work-list .cont_wrap ul li { width: calc(25% - 8px); }
+.work-list .cont_wrap ul li a { display: block; }
+.work-list .cont_wrap ul li a img { width: 100%; }
 
 @media only all and (max-width: 767px) {
     .work-list .type_btns { display: flex; gap: 32px; font-family: 'Pretendard'; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; word-break: keep-all; }
