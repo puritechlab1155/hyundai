@@ -230,7 +230,7 @@ footer {height: 377px;}
 
 footer .office-info p { margin-top: 10px; }
 
-.footer-content-mobile > div:nth-child(5) { position:absolute; right:19px; bottom:29px; position: fixed;}
+.footer-content-mobile > div:nth-child(5) { position:absolute; right:19px; bottom:29px; position: fixed; z-index: 27; }
 
 .footer-content-mobile  .contact-us .rotating-image {animation: rotate 2.5s linear infinite; width: 60px; height: 60px;}
 @keyframes rotate {
@@ -254,7 +254,7 @@ footer .office-info p { margin-top: 10px; }
     border: 1px solid black;
     cursor: pointer;
     /* transition: transform 0.5s ease-in-out; */
-    position: fixed; /* 박스를 뷰포트에 고정 */
+    position: fixed; /* 박스를 뷰포트에 고정 */ z-index: 26;
 }
 .footer-content-mobile .footer-box .arrow-image {width: 24px; height: 24px;}
 
