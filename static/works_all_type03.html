@@ -36,6 +36,23 @@
                         <a href="#">INFORMATION</a>
                     </div>
                 </li>
+                <li class="close_btn">
+                    <div class="close"><label for="close_check"><input type="checkbox" id="close_check"><img src="images/common/close_btn.png" class="fa-xmark"></img></label></div>
+                    <script>
+                        function closeOnOff() {
+                            const checkBox = document.getElementById('close_check');
+
+                            if(checkBox.checked){
+                                $('.fa-xmark').style.opacity = '1';
+                            }else{
+                                $('.fa-xmark').style.opacity = '0';
+                            }
+                        }
+                        $('.close').click(function(){
+                            $('.work_detail ul li').hide();
+                        });
+                    </script>
+                </li>
             </ul>
         </nav>
     </header>    
