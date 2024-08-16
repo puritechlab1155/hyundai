@@ -170,7 +170,6 @@ header .close_btn .close label img { opacity: 0; transition: all 0.3s; }
 
 /* work-detail */
 .work_detail { position: absolute; left: 0; top: 0; background: #fff; z-index: 20; }
-.work_detail ul li { background: #fff; padding-bottom: 80%; }
 .work_detail .contents { width: 100%; display: flex; position: relative; letter-spacing: -0.01em; font-family: 'Pretendard', sans-serif; padding: 0 24px; }
 .work_detail .contents .side_info { padding: 120px 24px 300px; position: sticky; left: 0; top: 0; height: fit-content; flex-shrink: 0; }
 .work_detail .contents .side_info .title_box .text_orange { color: #f39700; text-transform: uppercase; padding: 12px 0; font-weight: 400; font-size: 16px; }
