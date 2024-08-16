@@ -288,7 +288,7 @@ footer .office-info p { margin-top: 10px; }
 .header-pc { display: none;}
 .header-mo { display: block;}
 .header-mo .page-header { padding: 16px; display: flex; gap: 10px;}
-.header-back { display: block !important; }
+.header-back { display: block !important; margin-top: 12px; }
 .header-back img {  display: block;  }
 
 .header-mo .header-search { display: flex;
