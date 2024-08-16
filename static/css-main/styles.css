@@ -148,7 +148,7 @@
     color: #aaa; background: rgba(255, 255, 255, 0.7); font-size: 20px;
     cursor: pointer;
 }
-.work-list .btn_box .contact-us .rotating-image {animation: rotate 2.5s linear infinite;}
+.work-list .btn_box .contact-us .rotating-image { animation: rotate 2.5s linear infinite; }
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -165,6 +165,7 @@
     .work-list .cont_wrap ul { grid-template-columns: 1fr 1fr; gap: 4px; }
 
     .work-list .top_btn { display: none; }
+    .work-list .btn_box .contact-us .rotating-image { display: none; }
 }
 
 /* work-detail */

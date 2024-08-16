@@ -65,15 +65,7 @@ footer .social-info .text_yt { margin: 10px 0; }
 .footer-content-mobile { display: none;}
 .footer-content-pc {display: flex; gap: 40px; position: relative;padding: 80px; width: 100%;}
 
-.footer-content-pc > div:nth-child(1) span{color: #101010;}
-.footer-content-pc > div:nth-child(1) p{color: #707070;}
-
-.footer-content-pc > div:nth-child(3) span{color: #101010;}
-.footer-content-pc > div:nth-child(3) p{color: #707070;}
-
 .footer-content-pc > div:nth-child(4) {margin: 10px;}
-.footer-content-pc > div:nth-child(4) span{color: #101010;}
-.footer-content-pc > div:nth-child(4) p{color: #707070;}
 
 .footer-content-pc > .contact-us { position:absolute; right: 80px; }
 
@@ -201,7 +193,7 @@ header .mobile-menu .search-container button {
     cursor: pointer;
 }
 header .mobile-menu .search-container button:hover { background-color: #ddd;}
-   
+
 /* video */
 main .video-container .video-overlay {
     position: absolute;
@@ -236,17 +228,8 @@ footer {height: 377px;}
 .footer-content-pc { display: none;}
 .footer-content-mobile{display: flex; flex-direction: column; position: relative; padding: 56px 24px 40px; gap:32px;}
 
-.footer-content-mobile > div:nth-child(1) span {display: block; color: #101010; margin-bottom: 10px;}
-.footer-content-mobile > div:nth-child(1) p { display: block; color: #707070; margin-bottom: 10px;}
+footer .office-info p { margin-top: 10px; }
 
-.footer-content-mobile  > div:nth-child(2) {margin-right: 24px;}
-.footer-content-mobile  > div:nth-child(2) span{display: block; color: #101010; margin-bottom: 10px;}
-.footer-content-mobile  > div:nth-child(2) p{display: block; color: #707070; margin-bottom: 10px;}
-
-.footer-content-mobile  > div:nth-child(3) span{ display: block; color: #101010; margin-bottom: 10px;}
-.footer-content-mobile  > div:nth-child(3) p{display: block; color: #707070; margin-bottom: 10px;}
-
-.footer-content-mobile > div:nth-child(4) {color: #707070; }
 .footer-content-mobile > div:nth-child(5) { position:absolute; right:19px; bottom:29px; position: fixed;}
 
 .footer-content-mobile  .contact-us .rotating-image {animation: rotate 2.5s linear infinite; width: 60px; height: 60px;}
@@ -362,4 +345,3 @@ footer {height: 377px;}
 }
 
 }
-  
