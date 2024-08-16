@@ -11,6 +11,12 @@
     .mobile_display { display: block; }
 }
 
+/* close_btn */
+.close_btn { margin-right: 0; }
+.close_btn .close input { display: none; }
+.close_btn .close input:checked + img { opacity: 1; }
+.close_btn .close label img { opacity: 0; transition: all 0.3s; }
+
 /* page_about */
 .page_about { margin: 150px 0 40px; }
 .page_about .contents { width: 100%; font-family: 'Pretendard', sans-serif; letter-spacing: -0.01em; position: relative; }
@@ -162,7 +168,6 @@
 .work_detail .contents .side_info .share_btn a .inner span { font-weight: 500; font-size: 16px; }
 
 .work_detail .contents .main_conts { margin: 150px auto 40px; display: flex; flex-direction: column; gap: 200px; padding: 0 30px; }
-.work_detail .contents .main_conts article .close { text-align: right; margin-bottom: 20px; color: #101010; }
 .work_detail .contents .main_conts article img { width: 100%; }
 
 @media only all and (max-width: 767px) {

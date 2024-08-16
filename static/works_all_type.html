@@ -39,6 +39,23 @@
                         <a href="#">INFORMATION</a>
                     </div>
                 </li>
+                <li class="close_btn">
+                    <div class="close"><label for="close_check"><input type="checkbox" id="close_check"><img src="images/common/close_btn.png" class="fa-xmark"></img></label></div>
+                    <script>
+                        function closeOnOff() {
+                            const checkBox = document.getElementById('close_check');
+
+                            if(checkBox.checked){
+                                $('.fa-xmark').style.opacity = '1';
+                            }else{
+                                $('.fa-xmark').style.opacity = '0';
+                            }
+                        }
+                        $('.close').click(function(){
+                            $('.work_detail ul li').hide();
+                        });
+                    </script>
+                </li>
             </ul>
         </nav>
     </header>    
@@ -292,12 +309,6 @@
                     
                                 <div class="main_conts">
                                     <article class="art art01">
-                                        <div class="close"><i class="fa-solid fa-xmark"></i></div>
-                                        <script>
-                                            $('.close').click(function(){
-                                                $('.work_detail ul li').hide();
-                                            });
-                                        </script>
                                         <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
                                     </article>
                                     <article class="art art01">
@@ -1435,6 +1446,8 @@
                     $('.work_detail ul li').hide();
 
                     $('.cont_wrap ul li').click(function(){
+                        document.getElementById('close_check').checked = true;
+                        
                         var idx = $(this).index();
 
                         $('.work_detail ul li').eq(idx).show();
