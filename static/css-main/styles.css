@@ -40,7 +40,7 @@ header .close_btn .close label img { opacity: 0; transition: all 0.3s; }
 .page_about .contents .section02 .inner01 .conts { width: 60%; padding-left: 140px; }
 .page_about .contents .section02 .inner01 .conts p { font-weight: 300; font-size: 16px; line-height: 180%; width: 100%; max-width: 649px; }
 
-.page_about .contents .section02 .inner02 { width: 71%; margin: 80px auto 0; padding: 0 24px; }
+.page_about .contents .section02 .inner02 { width: 75%; margin: 80px auto 0; padding: 0 24px; }
 .page_about .contents .section02 .inner02 .item_box { display: flex; flex-wrap: wrap; gap: 26px 10px; padding: 0 24px; }
 .page_about .contents .section02 .inner02 .item_box .item { border: 1px solid #f39700; padding: 40px; width: 100%; max-width: 222px; height: 341px; position: relative; }
 .page_about .contents .section02 .inner02 .item_box .item::before { content: ''; width: 16px; height: 32px; background: #f39700; position: absolute; left: 40px; top: 0; transform: translateY(-50%); }

@@ -151,7 +151,7 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
     header .logo img{ width: 172px; height: 32px;}
 
     /* header nav ul {display: none;} */
-    header .menu-icon {display: block; font-size: 20px; margin-right: 27px;}
+    header .menu-icon {display: block; font-size: 20px;}
     header .desktop-nav {display: none;}
 
     header .mobile-menu {
@@ -289,7 +289,7 @@ footer .office-info p { margin-top: 10px; }
 .header-mo { display: block;}
 .header-mo .page-header { padding: 16px; display: flex; gap: 10px;}
 .header-back { display: block !important; }
-.header-back img {  display: block;  margin-left: 28px; }
+.header-back img {  display: block;  }
 
 .header-mo .header-search { display: flex;
     border-radius: 25px;

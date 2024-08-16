@@ -232,22 +232,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-//works 모바일 화면에서만 로고가 보이도록
-// document.addEventListener('DOMContentLoaded', function() {
-//     const currentPage = document.body.getAttribute('data-page');
-//     const headerMo = document.querySelector('.header-mo');
-
-//     if (window.innerWidth <= 768) { // 모바일 화면 크기
-//         if (currentPage === 'works') {
-//             headerMo.style.display = 'block'; // 특정 페이지에서만 로고 표시
-//         } else {
-//             headerMo.style.display = 'none'; // 다른 페이지에서는 로고 숨김
-//         }
-//     } else {
-//         headerMo.style.display = 'block'; // 데스크탑에서는 모든 페이지에서 로고 표시
-//     }
-// });
-
 
 
 
