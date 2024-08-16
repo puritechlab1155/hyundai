@@ -70,7 +70,7 @@ footer {background: white;font-size: 12px;height: 182px;}
 .footer-content-pc > div:nth-child(4) span{color: #101010;}
 .footer-content-pc > div:nth-child(4) p{color: #707070;}
 
-.footer-content-pc > div:nth-child(5) { position:absolute; right:80px}
+.footer-content-pc > .contact-us { position:absolute; right: 80px; }
 
 .footer-content-pc .contact-us .rotating-image {animation: rotate 2.5s linear infinite;}
 @keyframes rotate {
