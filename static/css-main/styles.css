@@ -170,6 +170,20 @@
 .work_detail .contents .main_conts { margin: 150px auto 40px; display: flex; flex-direction: column; gap: 200px; padding: 0 30px; }
 .work_detail .contents .main_conts article img { width: 100%; }
 
+.work_detail .contents .top_btn { position: fixed; right: 0.5%; bottom: 18%; }
+.work_detail .contents .top_btn button { display: block; width: 30px; height: 30px; text-align: center; border-radius: 50%; border: 1px solid #aaa; color: #aaa; background: rgba(255, 255, 255, 0.7); font-size: 15px; cursor: pointer; }
+
+.work_detail .contents .contact-us { position: fixed; right: 3%; bottom: 4%; }
+.work_detail .contents .contact-us .rotating-image {animation: rotate 2.5s linear infinite;}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @media only all and (max-width: 767px) {
     .work_detail .contents { flex-direction: column; }
     .work_detail .contents .side_info { position: unset; height: auto; padding: 0px 0 56px; }
