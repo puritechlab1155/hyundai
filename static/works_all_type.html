@@ -39,6 +39,23 @@
                         <a href="#">INFORMATION</a>
                     </div>
                 </li>
+                <li class="close_btn">
+                    <div class="close"><label for="close_check"><input type="checkbox" id="close_check"><img src="images/common/close_btn.png" class="fa-xmark"></img></label></div>
+                    <script>
+                        function closeOnOff() {
+                            const checkBox = document.getElementById('close_check');
+
+                            if(checkBox.checked){
+                                $('.fa-xmark').style.opacity = '1';
+                            }else{
+                                $('.fa-xmark').style.opacity = '0';
+                            }
+                        }
+                        $('.close').click(function(){
+                            $('.work_detail ul li').hide();
+                        });
+                    </script>
+                </li>
             </ul>
         </nav>
     </header>    
@@ -226,7 +243,7 @@
 
                 <div class="work_detail">
                     <ul class="detail_list">
-                        <li>
+                        <li class="list01 active">
                             <div class="contents">
                                 <div class="side_info pc_display">
                                     <div class="title_box">
@@ -266,6 +283,11 @@
                                             </div>
                                         </a>
                                     </div>
+
+                                    <div class="prev_next">
+                                        <div id="prev"><img src="images/common/icon-prev.png" alt=""></div>
+                                        <div id="next"><img src="images/common/icon-next.png" alt=""></div>
+                                    </div>
                                 </div><!-- //side_info //pc_display -->
                     
                                 <div class="side_info mobile_display">
@@ -301,6 +323,22 @@
                                         <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
                                     </article>
                                 </div><!-- //main_conts -->
+
+                                <div class="top_btn">
+                                    <button onclick="topFunction02()"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <script>
+                                        function topFunction02() {
+                                            window.scrollTo({
+                                                top: 0, 
+                                                behavior: 'smooth' // 부드러운 스크롤
+                                            });
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class="contact-us">
+                                    <a href=""><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+                                </div>
                     
                                 <div class="text_area mobile_display">
                                     <div class="text">
@@ -318,7 +356,7 @@
                                 </div><!-- //text_area -->
                             </div>
                         </li>
-                        <li>
+                        <li  class="list02">
                             <div class="contents">
                                 <div class="side_info pc_display">
                                     <div class="title_box">
@@ -393,6 +431,22 @@
                                         <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
                                     </article>
                                 </div><!-- //main_conts -->
+
+                                <div class="top_btn">
+                                    <button onclick="topFunction02()"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <script>
+                                        function topFunction02() {
+                                            window.scrollTo({
+                                                top: 0, 
+                                                behavior: 'smooth' // 부드러운 스크롤
+                                            });
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class="contact-us">
+                                    <a href=""><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+                                </div>
                     
                                 <div class="text_area mobile_display">
                                     <div class="text">
@@ -410,7 +464,7 @@
                                 </div><!-- //text_area -->
                             </div>
                         </li>
-                        <li>
+                        <li  class="list03">
                             <div class="contents">
                                 <div class="side_info pc_display">
                                     <div class="title_box">
@@ -485,6 +539,22 @@
                                         <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
                                     </article>
                                 </div><!-- //main_conts -->
+
+                                <div class="top_btn">
+                                    <button onclick="topFunction02()"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <script>
+                                        function topFunction02() {
+                                            window.scrollTo({
+                                                top: 0, 
+                                                behavior: 'smooth' // 부드러운 스크롤
+                                            });
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class="contact-us">
+                                    <a href=""><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+                                </div>
                     
                                 <div class="text_area mobile_display">
                                     <div class="text">
@@ -502,7 +572,7 @@
                                 </div><!-- //text_area -->
                             </div>
                         </li>
-                        <li>
+                        <li  class="list04">
                             <div class="contents">
                                 <div class="side_info pc_display">
                                     <div class="title_box">
@@ -577,6 +647,22 @@
                                         <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
                                     </article>
                                 </div><!-- //main_conts -->
+
+                                <div class="top_btn">
+                                    <button onclick="topFunction02()"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <script>
+                                        function topFunction02() {
+                                            window.scrollTo({
+                                                top: 0, 
+                                                behavior: 'smooth' // 부드러운 스크롤
+                                            });
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class="contact-us">
+                                    <a href=""><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+                                </div>
                     
                                 <div class="text_area mobile_display">
                                     <div class="text">
@@ -594,7 +680,7 @@
                                 </div><!-- //text_area -->
                             </div>
                         </li>
-                        <li>
+                        <li  class="list05">
                             <div class="contents">
                                 <div class="side_info pc_display">
                                     <div class="title_box">
@@ -660,15 +746,31 @@
                     
                                 <div class="main_conts">
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail01.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail02.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail03.jpg" alt="">
                                     </article>
                                 </div><!-- //main_conts -->
+
+                                <div class="top_btn">
+                                    <button onclick="topFunction02()"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <script>
+                                        function topFunction02() {
+                                            window.scrollTo({
+                                                top: 0, 
+                                                behavior: 'smooth' // 부드러운 스크롤
+                                            });
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class="contact-us">
+                                    <a href=""><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+                                </div>
                     
                                 <div class="text_area mobile_display">
                                     <div class="text">
@@ -686,7 +788,7 @@
                                 </div><!-- //text_area -->
                             </div>
                         </li>
-                        <li>
+                        <li  class="list06">
                             <div class="contents">
                                 <div class="side_info pc_display">
                                     <div class="title_box">
@@ -752,15 +854,31 @@
                     
                                 <div class="main_conts">
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail01.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail02.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail03.jpg" alt="">
                                     </article>
                                 </div><!-- //main_conts -->
+
+                                <div class="top_btn">
+                                    <button onclick="topFunction02()"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <script>
+                                        function topFunction02() {
+                                            window.scrollTo({
+                                                top: 0, 
+                                                behavior: 'smooth' // 부드러운 스크롤
+                                            });
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class="contact-us">
+                                    <a href=""><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+                                </div>
                     
                                 <div class="text_area mobile_display">
                                     <div class="text">
@@ -778,7 +896,7 @@
                                 </div><!-- //text_area -->
                             </div>
                         </li>
-                        <li>
+                        <li  class="list07">
                             <div class="contents">
                                 <div class="side_info pc_display">
                                     <div class="title_box">
@@ -844,15 +962,31 @@
                     
                                 <div class="main_conts">
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail01.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail02.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail03.jpg" alt="">
                                     </article>
                                 </div><!-- //main_conts -->
+
+                                <div class="top_btn">
+                                    <button onclick="topFunction02()"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <script>
+                                        function topFunction02() {
+                                            window.scrollTo({
+                                                top: 0, 
+                                                behavior: 'smooth' // 부드러운 스크롤
+                                            });
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class="contact-us">
+                                    <a href=""><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+                                </div>
                     
                                 <div class="text_area mobile_display">
                                     <div class="text">
@@ -870,7 +1004,7 @@
                                 </div><!-- //text_area -->
                             </div>
                         </li>
-                        <li>
+                        <li  class="list08">
                             <div class="contents">
                                 <div class="side_info pc_display">
                                     <div class="title_box">
@@ -936,15 +1070,31 @@
                     
                                 <div class="main_conts">
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail01.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail02.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail03.jpg" alt="">
                                     </article>
                                 </div><!-- //main_conts -->
+
+                                <div class="top_btn">
+                                    <button onclick="topFunction02()"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <script>
+                                        function topFunction02() {
+                                            window.scrollTo({
+                                                top: 0, 
+                                                behavior: 'smooth' // 부드러운 스크롤
+                                            });
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class="contact-us">
+                                    <a href=""><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+                                </div>
                     
                                 <div class="text_area mobile_display">
                                     <div class="text">
@@ -962,7 +1112,7 @@
                                 </div><!-- //text_area -->
                             </div>
                         </li>
-                        <li>
+                        <li  class="list09">
                             <div class="contents">
                                 <div class="side_info pc_display">
                                     <div class="title_box">
@@ -1028,15 +1178,31 @@
                     
                                 <div class="main_conts">
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail01.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail02.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail03.jpg" alt="">
                                     </article>
                                 </div><!-- //main_conts -->
+
+                                <div class="top_btn">
+                                    <button onclick="topFunction02()"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <script>
+                                        function topFunction02() {
+                                            window.scrollTo({
+                                                top: 0, 
+                                                behavior: 'smooth' // 부드러운 스크롤
+                                            });
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class="contact-us">
+                                    <a href=""><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+                                </div>
                     
                                 <div class="text_area mobile_display">
                                     <div class="text">
@@ -1054,7 +1220,7 @@
                                 </div><!-- //text_area -->
                             </div>
                         </li>
-                        <li>
+                        <li  class="list10">
                             <div class="contents">
                                 <div class="side_info pc_display">
                                     <div class="title_box">
@@ -1120,15 +1286,31 @@
                     
                                 <div class="main_conts">
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail01.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail02.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                        <img src="thumnail_images/magazine/komir/komir-deatail03.jpg" alt="">
                                     </article>
                                 </div><!-- //main_conts -->
+
+                                <div class="top_btn">
+                                    <button onclick="topFunction02()"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <script>
+                                        function topFunction02() {
+                                            window.scrollTo({
+                                                top: 0, 
+                                                behavior: 'smooth' // 부드러운 스크롤
+                                            });
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class="contact-us">
+                                    <a href=""><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+                                </div>
                     
                                 <div class="text_area mobile_display">
                                     <div class="text">
@@ -1146,7 +1328,7 @@
                                 </div><!-- //text_area -->
                             </div>
                         </li>
-                        <li>
+                        <li  class="list11">
                             <div class="contents">
                                 <div class="side_info pc_display">
                                     <div class="title_box">
@@ -1212,15 +1394,31 @@
                     
                                 <div class="main_conts">
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                        <img src="thumnail_images/magazine/kipa/kipa-detail01.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                        <img src="thumnail_images/magazine/kipa/kipa-detail02.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                        <img src="thumnail_images/magazine/kipa/kipa-detail03.jpg" alt="">
                                     </article>
                                 </div><!-- //main_conts -->
+
+                                <div class="top_btn">
+                                    <button onclick="topFunction02()"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <script>
+                                        function topFunction02() {
+                                            window.scrollTo({
+                                                top: 0, 
+                                                behavior: 'smooth' // 부드러운 스크롤
+                                            });
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class="contact-us">
+                                    <a href=""><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+                                </div>
                     
                                 <div class="text_area mobile_display">
                                     <div class="text">
@@ -1238,7 +1436,7 @@
                                 </div><!-- //text_area -->
                             </div>
                         </li>
-                        <li>
+                        <li  class="list12">
                             <div class="contents">
                                 <div class="side_info pc_display">
                                     <div class="title_box">
@@ -1304,107 +1502,31 @@
                     
                                 <div class="main_conts">
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
+                                        <img src="thumnail_images/magazine/kipa/kipa-detail01.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
+                                        <img src="thumnail_images/magazine/kipa/kipa-detail02.jpg" alt="">
                                     </article>
                                     <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
+                                        <img src="thumnail_images/magazine/kipa/kipa-detail03.jpg" alt="">
                                     </article>
                                 </div><!-- //main_conts -->
-                    
-                                <div class="text_area mobile_display">
-                                    <div class="text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-                                    </div>
-                    
-                                    <div class="share_btn">
-                                        <a href="#">
-                                            <div class="inner">
-                                                <span>공유하기</span>
-                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div><!-- //text_area -->
-                            </div>
-                        </li>
-                        <li>
-                            <div class="contents">
-                                <div class="side_info pc_display">
-                                    <div class="title_box">
-                                        <div class="text_orange">
-                                            magazine
-                                        </div>
-                                        <div class="title">
-                                            2019<br>
-                                            (초중등)발명교육 백서
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="text">
-                                        한국발명진흥회
-                                    </div>
-                    
-                                    <div class="info_box">
-                                        <div class="info info1">
-                                            <span>date</span>
-                                            <em>2023 3+4</em>
-                                        </div>
-                                        <div class="info info2">
-                                            <span>client</span>
-                                            <em>ITS KOREA</em>
-                                        </div>
-                                        <div class="info info3">
-                                            <span>spec</span>
-                                            <em>150*299, 모조지, 블링블링</em>
-                                        </div>
-                                    </div>
-                    
-                                    <div class="share_btn">
-                                        <a href="#">
-                                            <div class="inner">
-                                                <span>공유하기</span>
-                                                <em><img src="images/detail/arrow-right.svg" alt=""></em>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div><!-- //side_info //pc_display -->
-                    
-                                <div class="side_info mobile_display">
-                                    <div class="title_box">
-                                        <div class="text_orange">magazine</div>
-                                        <div class="title">Standard ITS</div>
-                                    </div>
-                    
-                                    <div class="info_box">
-                                        <div class="info info1">
-                                            <span>date</span>
-                                            <em>2023 3+4</em>
-                                        </div>
-                                        <div class="info info2">
-                                            <span>client</span>
-                                            <em>ITS KOREA</em>
-                                        </div>
-                                        <div class="info info3">
-                                            <span>spec</span>
-                                            <em>150*299, 모조지, 블링블링</em>
-                                        </div>
-                                    </div>
-                                </div><!-- //side_info -->
-                    
-                                <div class="main_conts">
-                                    <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail01.jpg" alt="">
-                                    </article>
-                                    <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail02.jpg" alt="">
-                                    </article>
-                                    <article class="art art01">
-                                        <img src="thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
-                                    </article>
-                                </div><!-- //main_conts -->
+
+                                <div class="top_btn">
+                                    <button onclick="topFunction02()"><i class="fa-solid fa-chevron-up"></i></button>
+                                    <script>
+                                        function topFunction02() {
+                                            window.scrollTo({
+                                                top: 0, 
+                                                behavior: 'smooth' // 부드러운 스크롤
+                                            });
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class="contact-us">
+                                    <a href=""><img class="rotating-image"src="images/common/contact-us.png" alt=""></a>
+                                </div>
                     
                                 <div class="text_area mobile_display">
                                     <div class="text">
@@ -1429,11 +1551,39 @@
                     $('.work_detail ul li').hide();
 
                     $('.cont_wrap ul li').click(function(){
+                        document.getElementById('close_check').checked = true;
+                        
                         var idx = $(this).index();
 
                         $('.work_detail ul li').eq(idx).show();
                         $('.work_detail ul li').eq(idx).siblings().hide();
                     });
+
+                    const pages = document.querySelectorAll('.work_detail ul li');
+                    let currentPageIndex = 0;
+
+                    function showPage(index) {
+                        pages.forEach((page, i) => {
+                            page.classList.toggle('active', i === index);
+                        });
+                    }
+
+                    document.getElementById('prev').onclick = function() {
+                        if (currentPageIndex > 0) {
+                            currentPageIndex--;
+                            showPage(currentPageIndex);
+                        }
+                    };
+
+                    document.getElementById('next').onclick = function() {
+                        if (currentPageIndex < pages.length - 1) {
+                            currentPageIndex++;
+                            showPage(currentPageIndex);
+                        }
+                    };
+
+                    // 페이지를 처음부터 다시 설정 (초기 상태)
+                    showPage(currentPageIndex);
                 </script>
             </section>
         </main>
