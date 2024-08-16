@@ -12,10 +12,10 @@
 }
 
 /* close_btn */
-.close_btn { margin-right: 0; }
-.close_btn .close input { display: none; }
-.close_btn .close input:checked + img { opacity: 1; }
-.close_btn .close label img { opacity: 0; transition: all 0.3s; }
+header .close_btn { margin-right: 0; }
+header .close_btn .close input { display: none; }
+header .close_btn .close input:checked + img { opacity: 1; }
+header .close_btn .close label img { opacity: 0; transition: all 0.3s; }
 
 /* page_about */
 .page_about { margin: 150px 0 40px; }
@@ -140,8 +140,23 @@
 .work-list .pagenation ul li.on { color: #101010; }
 .work-list .pagenation ul .arrow { padding: 0 3px; }
 
-.work-list .top_btn { position: sticky; right: 0; bottom: 4%; z-index: 19; display: flex; justify-content: end; padding-right: 4%; }
-.work-list .top_btn button { display: block; width: 30px; height: 30px; text-align: center; border-radius: 50%; border: 1px solid #aaa; color: #aaa; background: rgba(255, 255, 255, 0.7); font-size: 15px; cursor: pointer; }
+.work-list .btn_box { display: flex; flex-direction: column; position: fixed; right: 4%; bottom: 4%; align-items: center; gap: 30px; z-index: 25; }
+.work-list .btn_box .top_btn button {
+    display: block; width: 40px; height: 40px;
+    text-align: center;
+    border-radius: 50%; border: 1px solid #aaa;
+    color: #aaa; background: rgba(255, 255, 255, 0.7); font-size: 20px;
+    cursor: pointer;
+}
+.work-list .btn_box .contact-us .rotating-image { animation: rotate 2.5s linear infinite; }
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 @media only all and (max-width: 767px) {
     .work-list { padding-top: 0; padding-bottom: 0; }
@@ -150,10 +165,12 @@
     .work-list .cont_wrap ul { grid-template-columns: 1fr 1fr; gap: 4px; }
 
     .work-list .top_btn { display: none; }
+    .work-list .btn_box .contact-us .rotating-image { display: none; }
 }
 
 /* work-detail */
 .work_detail { position: absolute; left: 0; top: 0; background: #fff; z-index: 20; }
+.work_detail ul li { background: #fff; padding-bottom: 80%; }
 .work_detail .contents { width: 100%; display: flex; position: relative; letter-spacing: -0.01em; font-family: 'Pretendard', sans-serif; padding: 0 24px; }
 .work_detail .contents .side_info { padding: 120px 24px 300px; position: sticky; left: 0; top: 0; height: fit-content; flex-shrink: 0; }
 .work_detail .contents .side_info .title_box .text_orange { color: #f39700; text-transform: uppercase; padding: 12px 0; font-weight: 400; font-size: 16px; }
@@ -172,31 +189,18 @@
 .work_detail .contents .main_conts { margin: 150px auto 40px; display: flex; flex-direction: column; gap: 200px; padding: 0 30px; }
 .work_detail .contents .main_conts article img { width: 100%; }
 
-.work_detail .contents .top_btn { position: fixed; right: 0.5%; bottom: 18%; }
-.work_detail .contents .top_btn button { display: block; width: 30px; height: 30px; text-align: center; border-radius: 50%; border: 1px solid #aaa; color: #aaa; background: rgba(255, 255, 255, 0.7); font-size: 15px; cursor: pointer; }
-
-.work_detail .contents .contact-us { position: fixed; right: 3%; bottom: 4%; }
-.work_detail .contents .contact-us .rotating-image {animation: rotate 2.5s linear infinite;}
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 @media only all and (max-width: 767px) {
     .work_detail .contents { flex-direction: column; }
-    .work_detail .contents .side_info { position: unset; height: auto; padding: 0px 0 56px; }
+    .work_detail .contents .side_info { position: relative; height: auto; padding: 0px 0 56px; }
     .work_detail .contents .side_info .title_box .text_orange { padding: 4px 0; font-size: 14px; line-height: 130%; }
     .work_detail .contents .side_info .title_box .title { font-weight: 300; font-size: 32px; text-transform: uppercase; margin-top: 4px; }
     .work_detail .contents .side_info .info_box { margin-top: 24px; }
     .work_detail .contents .side_info .info_box .info { font-size: 14px; line-height: 130%; }
     .work_detail .contents .side_info .info_box .info2 { margin: 12px 0; }
     .work_detail .contents .side_info .info_box .info span { width: 47px; margin-right: 24px; }
+    .work_detail .close_btn02 { position: absolute; right: 0; top: 0; }
 
-    .work_detail .contents .main_conts { gap: 24px; }
+    .work_detail .contents .main_conts { gap: 24px; margin: 0 auto; padding: 0; }
     .work_detail .contents .main_conts img { width: 100%; }
 
     .work_detail .contents .text_area { margin-top: 56px; }
