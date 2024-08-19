@@ -29,9 +29,9 @@ header .header-back {display: none;}
 header .logo {font-size: 24px; font-weight: bold; margin-left: 80px; display: block; }
 header nav { height: auto; margin-right: 104px; }
 header nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
-header nav ul li { margin-right: 40px; }
-header nav ul li a:hover { /* font-weight: 700; */ text-shadow: 0.5px 0 #000, -0.5px 0 #000, 0 0.5px #000, 0 -0.5px #000; }
-header nav ul li a { text-decoration: none; color: black; font-size: 20px; }
+header nav ul li { margin-right: 40px; max-width: 68px; box-sizing: border-box; text-align: center; }
+header nav ul li a:hover { font-weight: 700; }
+header nav ul li a { text-decoration: none; color: black; font-size: 20px; transition: all 0.2s; }
 
 /* header dropdown */
 header .mobile-menu {display: none;}
@@ -44,6 +44,8 @@ header .dropdown-content {
     z-index: 1;
     flex-direction: column;
     text-align: left;
+    width: 100%; max-width: 165px;
+    box-sizing: border-box;
 }
 
 header .dropdown-content a {
