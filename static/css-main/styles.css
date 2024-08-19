@@ -196,6 +196,7 @@ header .close_btn .close label img { opacity: 0; transition: all 0.3s; }
 .work_detail .contents .main_conts article img { width: 100%; }
 
 @media only all and (max-width: 767px) {
+    .work_detail { display: none; }
     .work_detail .contents { flex-direction: column; }
     .work_detail .contents .side_info { position: relative; height: auto; padding: 0px 0 56px; }
     .work_detail .contents .side_info .title_box .text_orange { padding: 4px 0; font-size: 14px; line-height: 130%; }
