@@ -231,10 +231,34 @@ document.addEventListener('DOMContentLoaded', function() {
         logo.style.display = 'block'; // 데스크탑에서는 모든 페이지에서 로고 표시
     }
 });
+ 
 
 
+$(document).ready(function () {
+    // Swiper 초기화
+    var swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        loop: true, // 루프 활성화
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 
+    // 처음에는 work_detail을 숨기기
+    $('.work_detail').hide();
 
+    // 리스트 항목 클릭 시 해당 index의 스와이퍼 슬라이드로 이동
+    $('.list_page01 li').click(function () {
+        var index = $(this).index(); // 클릭한 항목의 인덱스 가져오기
+        $('.work_detail').show(); // work_detail 표시
+
+        // 루프가 활성화된 상태에서 정확한 슬라이드로 이동하기 위한 처리
+        var loopedSlides = swiper.loopedSlides || 0;
+        var realIndex = index + loopedSlides; // 실제 인덱스 계산
+        swiper.slideToLoop(realIndex); // 해당 인덱스의 슬라이드로 이동
+    });
+});
 
 
 
