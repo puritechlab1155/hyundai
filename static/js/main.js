@@ -36,25 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //웹 메뉴바 드롭다운
-/* const worksButton = document.getElementById('works-button');
-const dropdownContent = document.querySelector('.dropdown-content');
-
-worksButton.addEventListener('click', function(event) {
-    event.preventDefault();
-    dropdownContent.classList.toggle('show');
-});
-
-document.addEventListener('click', function(event) {
-    if (!event.target.matches('#works-button')) {
-        if (dropdownContent.classList.contains('show')) {
-            dropdownContent.classList.remove('show');
-        }
-    }
-}); */
-
 const worksButton = document.getElementById('works-button');
 const dropdownContent = document.querySelector('.dropdown-content');
 const checkBox = document.getElementById('close_check');
+
+console.log(worksButton); // worksButton이 null이 아니어야 함
 
 // 드롭다운 토글 함수
 function toggleDropdown() {
@@ -85,6 +71,7 @@ function closeOnOff() {
     }
 }
 
+
 // 체크박스 상태 변경 시 이벤트 리스너 추가
 checkBox.addEventListener('change', closeOnOff);
 
@@ -112,6 +99,35 @@ searchButton.addEventListener('click', function() {
     }
 });
 });
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const menuIcon = document.getElementById('menu-icon');
+//     const mobileMenu = document.getElementById('mobile-menu');
+//     const closeIcon = document.getElementById('close-icon');
+
+//     // 메뉴 열기
+//     menuIcon.addEventListener('click', function() {
+//         mobileMenu.classList.add('show');
+//     });
+
+//     // 메뉴 닫기
+//     closeIcon.addEventListener('click', function() {
+//         mobileMenu.classList.remove('show');
+//     });
+
+//     // 검색 기능
+//     const searchButton = document.getElementById('search-button');
+//     const searchInput = document.getElementById('search-input');
+
+//     searchButton.addEventListener('click', function() {
+//         const query = searchInput.value;
+//         if (query) {
+//             window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+//         }
+//     });
+// });
+
 
 
 // footer.html을 로드하고, 콘텐츠를 추가한 후, 스크롤 이벤트 리스너를 추가
@@ -268,33 +284,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
  
-
-
-$(document).ready(function () {
-    // Swiper 초기화
-    var swiper = new Swiper('.swiper', {
-        slidesPerView: 1,
-        loop: true, // 루프 활성화
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-
-    // 처음에는 work_detail을 숨기기
-    $('.work_detail').hide();
-
-    // 리스트 항목 클릭 시 해당 index의 스와이퍼 슬라이드로 이동
-    $('.list_page01 li').click(function () {
-        var index = $(this).index(); // 클릭한 항목의 인덱스 가져오기
-        $('.work_detail').show(); // work_detail 표시
-
-        // 루프가 활성화된 상태에서 정확한 슬라이드로 이동하기 위한 처리
-        var loopedSlides = swiper.loopedSlides || 0;
-        var realIndex = index + loopedSlides; // 실제 인덱스 계산
-        swiper.slideToLoop(realIndex); // 해당 인덱스의 슬라이드로 이동
-    });
-});
-
-
-

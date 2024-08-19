@@ -190,6 +190,42 @@ header .close_btn .close label img { display: block; opacity: 0; transition: all
 .work_detail .contents .side_info .share_btn a .inner { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; }
 .work_detail .contents .side_info .share_btn a .inner span { font-weight: 500; font-size: 16px; }
 
+.work_detail .contents .main_conts { margin:150px 40px 40px 80px;}
+.work_detail .contents .main_conts article { margin-bottom: 100px;}
+.work_detail .contents .main_conts article img { width: 100%;}
+
+.page {
+    display: none; /* 모든 페이지를 기본적으로 숨김 */
+}
+.page.active {
+    display: block; /* 활성화된 페이지만 보임 */
+}
+.buttons {
+    /* display: none !important; */
+    position: fixed; /* 화면에 고정 */
+    bottom: 20px; /* 화면 하단에서 20px 위에 위치 */
+    left: 50%; /* 화면의 중간에 위치하도록 설정 */
+    transform: translateX(-50%); /* 좌우 중앙 정렬 */
+    display: flex;
+    gap: 20px;
+}
+
+.buttons #prevBtn,
+.buttons #nextBtn {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buttons #prevBtn:hover,
+.buttons #nextBtn:hover {
+    background-color: #555;
+}
+
 
 
 @media only all and (max-width: 767px) {
