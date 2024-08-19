@@ -47,8 +47,10 @@
 
                             if(checkBox.checked){
                                 $('.fa-xmark').style.opacity = '1';
+                                $('.dropdown-content').style.display = 'none'
                             }else{
                                 $('.fa-xmark').style.opacity = '0';
+                                $('.dropdown-content').style.display = 'block'
                             }
                         }
                         $('.close').click(function(){
