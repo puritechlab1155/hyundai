@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //웹 메뉴바 드롭다운
-const worksButton = document.getElementById('works-button');
+/* const worksButton = document.getElementById('works-button');
 const dropdownContent = document.querySelector('.dropdown-content');
 
 worksButton.addEventListener('click', function(event) {
@@ -49,6 +49,36 @@ document.addEventListener('click', function(event) {
         if (dropdownContent.classList.contains('show')) {
             dropdownContent.classList.remove('show');
         }
+    }
+}); */
+
+const worksButton = document.getElementById('works-button');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+// 드롭다운 열기
+function openDropdown() {
+    dropdownContent.classList.add('show');
+}
+
+// 드롭다운 닫기
+function closeDropdown() {
+    dropdownContent.classList.remove('show');
+}
+
+// 드롭다운 토글
+function toggleDropdown() {
+    dropdownContent.classList.toggle('show');
+}
+
+worksButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    event.stopPropagation(); // 이 이벤트가 document로 전달되지 않도록 함
+    toggleDropdown(); // 메뉴를 토글
+});
+
+document.addEventListener('click', function(event) {
+    if (!worksButton.contains(event.target)) { // worksButton 외부 클릭 시
+        closeDropdown(); // 메뉴 닫기
     }
 });
 
