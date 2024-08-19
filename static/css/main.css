@@ -341,7 +341,7 @@ footer .office-info p { margin-top: 10px; }
     padding: 10px;
     background-color: #ffffff;    /* 배경색 설정 */
 }
-.header-mo .category-menu-wrapper .category-menu li.on { font-weight: 700; }
+.header-mo .category-menu-wrapper .category-menu li.on a { font-weight: 700; }
 
 .header-mo .category-menu-wrapper .category-menu li a {
     text-decoration: none;
