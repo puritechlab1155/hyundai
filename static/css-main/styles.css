@@ -169,6 +169,7 @@ header .close_btn .close label img { opacity: 0; transition: all 0.3s; }
 
     .work-list .cont_wrap { width: 100%; padding: 0 24px; }
     .work-list .cont_wrap ul { grid-template-columns: 1fr 1fr; gap: 4px; }
+    .work-list .cont_wrap ul li a .text_box { display: none; }
 
     .work-list .top_btn { display: none; }
     .work-list .btn_box .contact-us .rotating-image { display: none; }
