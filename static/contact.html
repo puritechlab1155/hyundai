@@ -105,8 +105,20 @@
 
     <!-- <header>
         <div class="logo"><a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a></div>
+    <header>
+        <div class="logo pc_display"><a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a></div>
+        <style>
+            @media only all and (max-width: 767px) {
+                header .logo.pc_display { display: none; }
+            }
+        </style>
         <div class="header-back">
-            <a href="hyundai_art.html"><img src="images/common/arrow-left.png" alt="Back"></a>
+            <a onclick="goBack()"><img src="images/common/arrow-left.png" alt="Back"></a>
+            <script>
+                function goBack() {
+                    window.history.back();
+                }
+            </script>
         </div>
         <nav class="desktop-nav">
             <ul>
@@ -145,7 +157,6 @@
     </header> -->
 
     <div class="wrapper"><!--wrapper -->
-        
         <main>
             <!-- 각 페이지의 메인 콘텐츠 -->
             <section id="container" class="contact">
@@ -315,7 +326,6 @@
                     </div><!-- //section02 -->
                 </div>
             </section>
-          
         </main>
 
     </div><!--wrapper -->
