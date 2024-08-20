@@ -68,7 +68,7 @@ header .close_btn .close label img { display: block; opacity: 0; transition: all
 }
 
 @media only all and (max-width: 767px) {
-    .wrapper { margin: 0;}
+    .wrapper { margin: 50px 0 0 0;}
     .page_about { margin: 40px 0 80px;}
     .page_about .contents::after { display: none; }
     .page_about .contents .section h2 { font-size: 32px; line-height: 130%; width: 100%; text-align: left; }

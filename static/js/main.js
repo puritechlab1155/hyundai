@@ -34,72 +34,62 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+//-----------------------------------------------------------------------------------
 
-//웹 메뉴바 드롭다운
-const worksButton = document.getElementById('works-button');
-const dropdownContent = document.querySelector('.dropdown-content');
-const checkBox = document.getElementById('close_check');
-
-console.log(worksButton); // worksButton이 null이 아니어야 함
-
-// 드롭다운 토글 함수
-function toggleDropdown() {
-    if (!checkBox.checked) { // 체크박스가 체크되지 않은 경우에만 작동
-        dropdownContent.classList.toggle('show');
-    }
-}
-
-// 드롭다운 열기/닫기 기능 제어
-worksButton.addEventListener('click', function(event) {
-    event.preventDefault();
-    event.stopPropagation(); // 이 이벤트가 document로 전달되지 않도록 함
-    toggleDropdown(); // 드롭다운 메뉴를 토글
-});
-
-// 드롭다운 외부 클릭 시 닫기
-document.addEventListener('click', function(event) {
-    if (!worksButton.contains(event.target)) { // worksButton 외부 클릭 시
-        dropdownContent.classList.remove('show'); // 메뉴 닫기
-    }
-});
-
-// 체크박스 상태에 따른 드롭다운 비활성화/활성화
-function closeOnOff() {
-    if (checkBox.checked) {
-        // 드롭다운 메뉴를 강제로 닫기 (체크박스 체크된 경우)
-        dropdownContent.classList.remove('show');
-    }
-}
-
-
-// 체크박스 상태 변경 시 이벤트 리스너 추가
-checkBox.addEventListener('change', closeOnOff);
-
-//모바일 메뉴바 드록다운
 document.addEventListener('DOMContentLoaded', function() {
-const menuIcon = document.getElementById('menu-icon');
-const mobileMenu = document.getElementById('mobile-menu');
-const closeIcon = document.getElementById('close-icon');
+    // 웹 메뉴바 드롭다운
+    const worksButton = document.getElementById('works-button');
+    const dropdownContent = document.querySelector('.dropdown-content');
 
-menuIcon.addEventListener('click', function() {
-    mobileMenu.classList.add('show');
-});
-
-closeIcon.addEventListener('click', function() {
-    mobileMenu.classList.remove('show');
-});
-
-const searchButton = document.getElementById('search-button');
-const searchInput = document.getElementById('search-input');
-
-searchButton.addEventListener('click', function() {
-    const query = searchInput.value;
-    if (query) {
-        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    // 드롭다운 토글 함수
+    function toggleDropdown() {
+        dropdownContent.classList.toggle('show'); // 드롭다운 메뉴 보이기/숨기기
     }
-});
+
+    // 드롭다운 열기/닫기 기능 제어
+    worksButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation(); // 이 이벤트가 document로 전달되지 않도록 함
+        toggleDropdown(); // 드롭다운 메뉴를 토글
+    });
+
+    // 드롭다운 외부 클릭 시 닫기
+    document.addEventListener('click', function(event) {
+        // worksButton이나 dropdownContent를 클릭하지 않은 경우 메뉴를 닫음
+        if (!worksButton.contains(event.target) && !dropdownContent.contains(event.target)) {
+            dropdownContent.classList.remove('show'); // 메뉴 닫기
+        }
+    });
+
+    // 모바일 메뉴바 드롭다운
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeIcon = document.getElementById('close-icon');
+
+    menuIcon.addEventListener('click', function() {
+        mobileMenu.classList.add('show'); // 모바일 메뉴 보이기
+    });
+
+    closeIcon.addEventListener('click', function() {
+        mobileMenu.classList.remove('show'); // 모바일 메뉴 숨기기
+    });
+
+    const searchButton = document.getElementById('search-button');
+    const searchInput = document.getElementById('search-input');
+
+    searchButton.addEventListener('click', function() {
+        const query = searchInput.value;
+        if (query) {
+            window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+        }
+    });
 });
 
+
+
+
+
+//-----------------------------------------------------------------------------------
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     const menuIcon = document.getElementById('menu-icon');
