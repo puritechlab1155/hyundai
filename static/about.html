@@ -22,8 +22,18 @@
 
     <header>
         <div class="logo pc_display"><a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a></div>
+        <style>
+            @media only all and (max-width: 767px) {
+                header .logo.pc_display { display: none; }
+            }
+        </style>
         <div class="header-back">
-            <a href="hyundai_art.html"><img src="images/common/arrow-left.png" alt="Back"></a>
+            <a onclick="goBack()"><img src="images/common/arrow-left.png" alt="Back"></a>
+            <script>
+                function goBack() {
+                    window.history.back();
+                }
+            </script>
         </div>
         <nav class="desktop-nav">
             <ul>

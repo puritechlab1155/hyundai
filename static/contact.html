@@ -11,61 +11,20 @@
 </head>
 <body>
 
-    <header class="header-pc">
-        <div class="logo"><a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a></div>
-        <nav class="desktop-nav">
-            <ul>
-                <li><a href="about.html">ABOUT</a></li>
-                <li class="dropdown">
-                    <a href="#works" id="works-button">WORKS</a>
-                    <div class="dropdown-content">
-                        <a href="works_all_type.html">ALL TYPE</a>
-                        <a href="magazine.html">MAGAZINE</a>
-                        <a href="editorial.html">EDITORIAL</a>
-                        <a href="goods.html">GOODS</a>
-                        <a href="promotion.html">PROMOTION</a>
-                        <a href="information.html">INFORMATION</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <header class="header-mo">
-        <div class="page-header">
-            <div class="header-back">
-                <a href="hyundai_art.html"><img src="images/common/arrow-left.png" alt="Back"></a>
-            </div>
-
-            <div class="header-search">
-                <input type="text" placeholder="검색" id="search-input">
-                <button class="page-search" id="search-button">
-                    <img src="images/common/Search.png" alt="Search">
-                </button>
-            </div>
-
-            <div class="menu-icon" id="menu-icon">
-                <a href="menu.html">&#9776;</a>
-            </div> 
-         </div> 
-
-        <!-- 카테고리 메뉴 추가 -->
-       <div class="category-menu-wrapper">
-            <ul class="category-menu">
-                <li><a href="#">ALL</a></li>
-                <li><a href="#">MAGAZINE</a></li>
-                <li><a href="#">EDITORIAL</a></li>
-                <li><a href="#">GOODS</a></li>
-                <li><a href="#">PROMOTION</a></li>
-                <li><a href="#">INFORMATION</a></li>
-            </ul>
-        </div>
-    </header> 
-
-    <!-- <header>
-        <div class="logo"><a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a></div>
+    <header>
+        <div class="logo pc_display"><a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a></div>
+        <style>
+            @media only all and (max-width: 767px) {
+                header .logo.pc_display { display: none; }
+            }
+        </style>
         <div class="header-back">
-            <a href="hyundai_art.html"><img src="images/common/arrow-left.png" alt="Back"></a>
+            <a onclick="goBack()"><img src="images/common/arrow-left.png" alt="Back"></a>
+            <script>
+                function goBack() {
+                    window.history.back();
+                }
+            </script>
         </div>
         <nav class="desktop-nav">
             <ul>
@@ -101,10 +60,9 @@
                 <button id="search-button"><img src="images/common/Search.png" alt=""></button>
             </div>
         </div>
-    </header> -->
+    </header>
 
     <div class="wrapper"><!--wrapper -->
-        
         <main>
             <!-- 각 페이지의 메인 콘텐츠 -->
             <section id="container" class="contact">
@@ -274,7 +232,6 @@
                     </div><!-- //section02 -->
                 </div>
             </section>
-          
         </main>
 
     </div><!--wrapper -->
