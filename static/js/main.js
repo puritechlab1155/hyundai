@@ -85,10 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
-
-
 //-----------------------------------------------------------------------------------
 
 // document.addEventListener('DOMContentLoaded', function() {
@@ -118,56 +114,58 @@ document.addEventListener('DOMContentLoaded', function() {
 //     });
 // });
 
+//------------------------------------
 
-
-// footer.html을 로드하고, 콘텐츠를 추가한 후, 스크롤 이벤트 리스너를 추가
-//스크롤 이벤트를 감지하여 특정 지점에 도달했을 때 보이도록
 document.addEventListener('DOMContentLoaded', function() {
-    const footerContainer = document.getElementById('footer-container');
+    // 모든 footer-container 요소들을 선택
+    const footerContainers = document.querySelectorAll('#footer-container');
 
-    // footer.html을 로드하여 footerContainer에 삽입
-    fetch('footer.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(data => {
-            footerContainer.innerHTML = data;
-
-            // footer.html이 로드된 후, 요소들을 가져와서 이벤트 리스너 추가
-            const contactUs = document.querySelector('.footer-content-mobile .contact-us');
-            const footerBox = document.getElementById('footer-box');
-
-            // 클릭 이벤트 리스너 추가
-            if (footerBox) {
-                footerBox.addEventListener('click', () => {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth' // 부드럽게 스크롤
-                    });
-                });
-            }
-
-            // 스크롤 이벤트 리스너 추가
-            window.addEventListener('scroll', () => {
-                const scrollPosition = window.scrollY; // 현재 스크롤 위치
-                const triggerPosition = 250; // 스크롤 위치가 250px 이상일 때 요소들을 보이게 함
-
-                if (scrollPosition > triggerPosition) {
-                    contactUs.style.opacity = '1'; // 스크롤 시 보이도록 설정
-                    footerBox.style.opacity = '1';
-                } else {
-                    contactUs.style.opacity = '0'; // 스크롤이 다시 위로 올라가면 숨김
-                    footerBox.style.opacity = '0';
+    // footer.html을 로드하여 각 footerContainer에 삽입
+    footerContainers.forEach(footerContainer => {
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
                 }
+                return response.text();
+            })
+            .then(data => {
+                footerContainer.innerHTML = data;
+
+                // footer.html이 로드된 후, 요소들을 가져와서 이벤트 리스너 추가
+                const contactUs = footerContainer.querySelector('.footer-content-mobile .contact-us');
+                const footerBox = footerContainer.querySelector('#footer-box');
+
+                // 클릭 이벤트 리스너 추가
+                if (footerBox) {
+                    footerBox.addEventListener('click', () => {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth' // 부드럽게 스크롤
+                        });
+                    });
+                }
+
+                // 스크롤 이벤트 리스너 추가
+                window.addEventListener('scroll', () => {
+                    const scrollPosition = window.scrollY; // 현재 스크롤 위치
+                    const triggerPosition = 250; // 스크롤 위치가 250px 이상일 때 요소들을 보이게 함
+
+                    if (scrollPosition > triggerPosition) {
+                        contactUs.style.opacity = '1'; // 스크롤 시 보이도록 설정
+                        footerBox.style.opacity = '1';
+                    } else {
+                        contactUs.style.opacity = '0'; // 스크롤이 다시 위로 올라가면 숨김
+                        footerBox.style.opacity = '0';
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
             });
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
+    });
 });
+
 
 
 // 요소들을 가져와서 스크롤시 푸터 이벤트 리스너 추가
@@ -222,26 +220,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 'about': 'about.html',
                 '어바웃': 'about.html',
 
-                'works': 'works.html',
-                '워크': 'works.html',
+                'works': 'works_all_type.html',
+                '워크': 'works_all_type.html',
+                '워크 디테일': 'works_all_type.html',
+                '일': 'works_all_type.html',
 
                 'magazine': 'magazine.html',
                 '매거진': 'magazine.html',
+                '잡지': 'magazine.html',
 
                 'editorial': 'editorial.html',
                 '에디토리얼': 'editorial.html',
+                '편집': 'editorial.html',
 
                 'goods': 'goods.html',
                 '굿즈': 'goods.html',
+                '굿스': 'goods.html',
+                '상품': 'goods.html',
 
                 'promotion': 'promotion.html',
                 '프로모션': 'promotion.html',
+                '광고': 'promotion.html',
 
                 'information': 'information.html',
                 '정보': 'information.html',
 
                 'contact': 'contact.html',
-                '컨택트': 'contact.html'
+                '컨택트': 'contact.html',
+                '연락하기': 'contact.html',
+                '회사': 'contact.html',
+                '연락처': 'contact.html',
+                '연락': 'contact.html'
                 // 필요한 경우 더 많은 매핑 추가 가능
             };
 
@@ -274,27 +283,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
  
-
-//pagenation
-
-// 페이지네이션 버튼들 선택
-// const paginationLinks = document.querySelectorAll('.pagenation ul li a');
-
-// // 이벤트 리스너 추가
-// paginationLinks.forEach(link => {
-//     link.addEventListener('click', function (event) {
-//         // 모든 링크에서 'on' 클래스 제거
-//         paginationLinks.forEach(link => link.parentElement.classList.remove('on'));
-
-//         // 클릭된 요소에 'on' 클래스 추가
-//         this.parentElement.classList.add('on');
-        
-//         // 페이지 이동을 허용
-//         window.location.href = this.getAttribute('href');
-//     });
-// });
-
-
+//페이지 네이션
 // 현재 페이지 번호 가져오기
 const currentPage = document.body.getAttribute('data-page');
 

@@ -384,8 +384,10 @@
                                             </div>
                                         </a>
                                     </div>
+                                   
                                 </div><!-- //text_area -->
-                            </div>
+                            </div> <!-- contatiner -->
+                            <div id="footer-container"></div>
                         </div>
                     </div>
                     <div class="page"> 
@@ -480,6 +482,7 @@
                                     </div>
                                 </div><!-- //text_area -->
                             </div>
+                            <div id="footer-container"></div>
                         </div>
                     </div>
                     <div class="page"> 
@@ -574,6 +577,7 @@
                                     </div>
                                 </div><!-- //text_area -->
                             </div>
+                            <div id="footer-container"></div>
                         </div>
                     </div>
                     <div class="page"> 
@@ -668,6 +672,7 @@
                                     </div>
                                 </div><!-- //text_area -->
                             </div>
+                            <div id="footer-container"></div>
                         </div>
                     </div>
                     <div class="page"> 
@@ -762,6 +767,7 @@
                                     </div>
                                 </div><!-- //text_area -->
                             </div>
+                            <div id="footer-container"></div>
                         </div>
                     </div>
                     <div class="page"> 
@@ -856,6 +862,7 @@
                                     </div>
                                 </div><!-- //text_area -->
                             </div>
+                            <div id="footer-container"></div>
                         </div>
                     </div>
 
@@ -951,6 +958,7 @@
                                     </div>
                                 </div><!-- //text_area -->
                             </div>
+                            <div id="footer-container"></div>
                         </div>
                     </div>
 
@@ -1046,6 +1054,7 @@
                                     </div>
                                 </div><!-- //text_area -->
                             </div>
+                            <div id="footer-container"></div>
                         </div>
                     </div>
                     <div class="page"> 
@@ -1140,6 +1149,7 @@
                                     </div>
                                 </div><!-- //text_area -->
                             </div>
+                            <div id="footer-container"></div>
                         </div>
                     </div>
 
@@ -1235,6 +1245,7 @@
                                     </div>
                                 </div><!-- //text_area -->
                             </div>
+                            <div id="footer-container"></div>
                         </div>
                     </div>
 
@@ -1330,6 +1341,7 @@
                                     </div>
                                 </div><!-- //text_area -->
                             </div>
+                            <div id="footer-container"></div>
                         </div>
                     </div>
 
@@ -1425,6 +1437,7 @@
                                     </div>
                                 </div><!-- //text_area -->
                             </div>
+                            <div id="footer-container"></div>
                         </div>
                     </div>
                     
@@ -1507,66 +1520,23 @@
             });
         </script>
 
-
-
-          
-<!-- 
-<script>
-    // 모든 페이지 숨기기 및 버튼 숨기기
-    const pages = document.querySelectorAll('.page');
-    const buttons = document.querySelector('.buttons');
-
-    pages.forEach(page => page.classList.remove('active'));
-
-    // cont_wrap 내 li 요소 선택
-    const listItems = document.querySelectorAll('.list_page01 li');
-
-    // 클릭된 li 요소의 순서에 맞게 해당 page와 버튼 보여주기
-    listItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            // cont_wrap 숨기기
-            document.querySelector('.cont_wrap').style.display = 'none';
-
-            // 모든 페이지 숨기기
-            pages.forEach(page => page.classList.remove('active'));
-
-            // 클릭된 li의 인덱스에 맞는 page를 보여주기
-            pages[index].classList.add('active');
-
-            // work_detail 보이기
-            document.querySelector('.work_detail').style.display = 'block';
-        });
-    });
-
-    // X 버튼 클릭 시 work_detail 숨기고 cont_wrap 보이기
-    document.getElementById('closeBtnWork').addEventListener('click', function() {
-        // work_detail 숨기기
-        document.querySelector('.work_detail').style.display = 'none';
-
-        // cont_wrap 보이기
-        document.querySelector('.cont_wrap').style.display = 'block';
-    });
-</script> -->
-
-
-
                 <div class="btn_box">
-                    <div class="top_btn">
-                        <button onclick="topFunction()"><i class="fa-solid fa-chevron-up"></i></button>
-                        <script>
-                            function topFunction() {
-                                window.scrollTo({
-                                    top: 0, 
-                                    behavior: 'smooth' // 부드러운 스크롤
-                                });
-                            }
-                        </script>
-                    </div>
+                        <div class="top_btn">
+                            <button onclick="topFunction()"><i class="fa-solid fa-chevron-up"></i></button>
+                            <script>
+                                function topFunction() {
+                                    window.scrollTo({
+                                        top: 0, 
+                                        behavior: 'smooth' // 부드러운 스크롤
+                                    });
+                                }
+                            </script>
+                        </div>
 
-                    <div class="contact-us">
-                        <a href="contact.html"><img class="rotating-image" src="images/common/contact-us.png"></a>
-                    </div>
-                </div><!-- //btn_box -->
+                        <div class="contact-us">
+                            <a href="contact.html"><img class="rotating-image" src="images/common/contact-us.png"></a>
+                        </div>
+                </div><!--btn_box  -->
 
             </section>
         </main>

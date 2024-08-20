@@ -239,6 +239,7 @@ header .close_btn .close label img { display: block; opacity: 0; transition: all
 
 @media only all and (max-width: 767px) {
     .work_detail { display: none; }
+    .work_detail .close-btn-work {display: none; }
     .work_detail .contents { flex-direction: column; }
     .work_detail .contents .side_info { position: relative; height: auto; padding: 0px 0 56px; }
     .work_detail .contents .side_info .title_box .text_orange { padding: 4px 0; font-size: 14px; line-height: 130%; }
@@ -280,6 +281,9 @@ header .close_btn .close label img { display: block; opacity: 0; transition: all
     .work_detail_mo .contents .text_area .share_btn a .inner { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; gap: 16px; }
     .work_detail_mo .contents .text_area .share_btn a .inner span { font-family: 'Pretendard', sans-serif; font-weight: 500; font-size: 14px; line-height: 130%; color: #101010; }
     .work_detail_mo .contents .text_area .share_btn a .inner img { display: block; }
+    .buttons {
+        display: none !important;
+
 }
 
 /* contact */
