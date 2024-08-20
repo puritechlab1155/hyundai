@@ -274,3 +274,39 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
  
+
+//pagenation
+
+// 페이지네이션 버튼들 선택
+// const paginationLinks = document.querySelectorAll('.pagenation ul li a');
+
+// // 이벤트 리스너 추가
+// paginationLinks.forEach(link => {
+//     link.addEventListener('click', function (event) {
+//         // 모든 링크에서 'on' 클래스 제거
+//         paginationLinks.forEach(link => link.parentElement.classList.remove('on'));
+
+//         // 클릭된 요소에 'on' 클래스 추가
+//         this.parentElement.classList.add('on');
+        
+//         // 페이지 이동을 허용
+//         window.location.href = this.getAttribute('href');
+//     });
+// });
+
+
+// 현재 페이지 번호 가져오기
+const currentPage = document.body.getAttribute('data-page');
+
+// 페이지네이션 버튼들 선택
+const paginationLinks = document.querySelectorAll('.pagenation ul li a');
+
+// 현재 페이지 번호에 맞는 링크에 'on' 클래스 추가
+paginationLinks.forEach(link => {
+    const pageNumber = link.textContent.trim(); // 링크 텍스트에서 숫자 가져오기
+    if (pageNumber === currentPage) {
+        link.parentElement.classList.add('on');
+    }
+});
+
+
