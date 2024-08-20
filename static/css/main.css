@@ -26,7 +26,7 @@ header {
 }
 header .header-back {display: none;}
 
-header .logo {font-size: 24px; font-weight: bold; margin-left: 80px; }
+header .logo {font-size: 24px; font-weight: bold; margin-left: 80px; display: block !important;}
 header nav { height: auto; margin-right: 104px; }
 header nav ul { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
 header nav ul li { margin-right: 40px; max-width: 68px; box-sizing: border-box; text-align: center; }
@@ -352,7 +352,7 @@ header .category-menu-wrapper::-webkit-scrollbar {
     padding: 10px;
     background-color: #ffffff;    /* 배경색 설정 */
 }
-.category-menu-wrapper .category-menu li.on a { font-weight: 700; }
+.category-menu-wrapper .category-menu li a.bold { font-weight: 700; }
 
 .category-menu-wrapper .category-menu li a {
     text-decoration: none;

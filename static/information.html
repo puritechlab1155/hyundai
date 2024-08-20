@@ -23,13 +23,16 @@
 </head>
 <body data-page="works">
 
-    <header class="header-pc">
-        <div class="logo"><a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a></div>
+    <header>
+        <div class="header-back">
+            <a href="hyundai_art.html"><img src="images/common/arrow-left.png" alt="Back"></a>
+        </div>
+         <div class="logo"><a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a></div>
         <nav class="desktop-nav">
             <ul>
                 <li><a href="about.html">ABOUT</a></li>
                 <li class="dropdown">
-                    <a href="#works" id="works-button">WORKS</a>
+                    <a href="works_all_type.html" id="works-button">WORKS</a>
                     <div class="dropdown-content">
                         <a href="works_all_type.html">ALL TYPE</a>
                         <a href="magazine.html">MAGAZINE</a>
@@ -39,41 +42,26 @@
                         <a href="information.html">INFORMATION</a>
                     </div>
                 </li>
-                <li class="close_btn">
-                    <div class="close"><label for="close_check"><input type="checkbox" id="close_check"><img src="images/common/close_btn.png" class="fa-xmark"></img></label></div>
-                    <script>
-                        function closeOnOff() {
-                            const checkBox = document.getElementById('close_check');
-
-                            if(checkBox.checked){
-                                $('.fa-xmark').style.opacity = '1';
-                            }else{
-                                $('.fa-xmark').style.opacity = '0';
-                            }
-                        }
-                        $('.close').click(function(){
-                            $('.work_detail ul li').hide();
-                        });
-                    </script>
-                </li>
             </ul>
         </nav>
-    </header>    
-
-    <div class="header-mo">
-        <div class="page-header">
-            <div class="header-back">
-                <a href="hyundai_art.html"><img src="images/common/arrow-left.png" alt="Back"></a>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a>
+                <div class="close-icon" id="close-icon">&times;</div>
             </div>
-
-            <div class="header-search">
-                <input type="text" placeholder="검색" id="search-input">
-                <button class="page-search" id="search-button">
-                    <img src="images/common/Search.png" alt="Search">
-                </button>
-            </div> 
-        </div> 
-        <!-- 카테고리 메뉴 추가 -->
+            <nav>
+                <ul>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="works_all_type.html">WORKS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="">
+                <button id="search-button"><img src="images/common/Search.png" alt=""></button>
+            </div>
+        </div>
         <div class="category-menu-wrapper">
             <ul class="category-menu">
                 <li><a href="works_all_type.html">ALL</a></li>
@@ -81,10 +69,10 @@
                 <li><a href="editorial.html">EDITORIAL</a></li>
                 <li><a href="goods.html">GOODS</a></li>
                 <li><a href="promotion.html">PROMOTION</a></li>
-                <li class="on"><a href="information.html">INFORMATION</a></li>
+                <li><a href="information.html">INFORMATION</a></li>
             </ul>
         </div>
-    </div> 
+    </header>
 
     <div class="wrapper"><!--wrapper -->
         

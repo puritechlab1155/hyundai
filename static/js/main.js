@@ -309,4 +309,21 @@ paginationLinks.forEach(link => {
     }
 });
 
+//카테고리 모바일. 클릭시 bold효과
+document.addEventListener('DOMContentLoaded', function () {
+    // 현재 페이지의 URL 경로를 가져옵니다.
+    const currentPage = window.location.pathname.split("/").pop();
+    
+    // 모든 메뉴 항목을 가져옵니다.
+    const menuItems = document.querySelectorAll('.category-menu li a');
+
+    // 현재 페이지와 일치하는 링크에 'bold' 클래스를 추가합니다.
+    menuItems.forEach(item => {
+        const linkHref = item.getAttribute('href');
+        if (linkHref === currentPage) {
+            item.classList.add('bold');
+        }
+    });
+});
+
 
