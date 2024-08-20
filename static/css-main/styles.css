@@ -11,10 +11,39 @@
 }
 
 /* close_btn */
+.close-btn-work {
+    color: #aaa;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    opacity: 0;
+}
 header .close_btn { margin-right: 0; }
 header .close_btn .close input { display: none; }
 header .close_btn .close input:checked + img { opacity: 1; }
-header .close_btn .close label img { display: block; opacity: 0; transition: all 0.3s; }
+header .close_btn .close label img { opacity: 0; transition: all 0.3s; display: block; }
+
+.btn_box { display: flex; flex-direction: column; position: fixed; right: 4%; bottom: 4%; align-items: center; gap: 30px; z-index: 25; }
+.btn_box .top_btn button {
+    display: block; width: 40px; height: 40px;
+    text-align: center;
+    border-radius: 50%; border: 1px solid #aaa;
+    color: #aaa; background: rgba(255, 255, 255, 0.7); font-size: 20px;
+    cursor: pointer;
+}
+.btn_box .contact-us .rotating-image { animation: rotate 2.5s linear infinite; }
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@media only all and (max-width: 767px) {
+    .work-list .top_btn { display: none; }
+    .work-list .btn_box .contact-us .rotating-image { display: none; }
+}
 
 /* page_about */
 .page_about { margin: 150px 0 40px; }
@@ -132,8 +161,8 @@ header .close_btn .close label img { display: block; opacity: 0; transition: all
 .work-list .cont_wrap ul { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; }
 .work-list .cont_wrap ul li { width: 100%; overflow: hidden; }
 .work-list .cont_wrap ul li a { width: 100%; height: fit-content; position: relative; cursor: pointer; }
-.work-list .cont_wrap ul li a img { width: 100%; }
-.work-list .cont_wrap ul li a .text_box { width: 100%; height: 100%; background: rgba(255, 255, 255, 0.5); position: absolute; left: 0; top: 0; box-sizing: border-box; padding: 130px 50px; font-size: 1.7rem; font-weight:700; color: #101010; font-family: 'Pretendard', sans-serif; opacity: 0; transition: all 0.3s; }
+.work-list .cont_wrap ul li a img { width: 100%; display: block; }
+.work-list .cont_wrap ul li a .text_box { width: 100%; height: 100%; background: rgba(255, 255, 255, 0.5); position: absolute; left: 0; top: 0; box-sizing: border-box; padding: 4vw 50px; font-size: 1.3vw; font-weight:700; color: #101010; font-family: 'Pretendard', sans-serif; opacity: 0; transition: all 0.3s; box-sizing: border-box; }
 .work-list .cont_wrap ul li:hover a .text_box { opacity: 1; }
 .work-list .cont_wrap ul li a .text_box .text01 { text-decoration: underline; }
 .work-list .cont_wrap ul li a .text_box .text02 { padding: 10px 0 40px; }
@@ -144,47 +173,16 @@ header .close_btn .close label img { display: block; opacity: 0; transition: all
 .work-list .pagenation  .on { color: #101010; }
 .work-list .pagenation ul .arrow { padding: 0 3px; }
 
-.work-list .btn_box { display: flex; flex-direction: column; position: fixed; right: 4%; bottom: 4%; align-items: center; gap: 30px; z-index: 25; }
-.work-list .btn_box .top_btn button {
-    display: block; width: 40px; height: 40px;
-    text-align: center;
-    border-radius: 50%; border: 1px solid #aaa;
-    color: #aaa; background: rgba(255, 255, 255, 0.7); font-size: 20px;
-    cursor: pointer;
-}
-.work-list .btn_box .contact-us .rotating-image { animation: rotate 2.5s linear infinite; }
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 @media only all and (max-width: 767px) {
     .work-list { padding-top: 0; padding-bottom: 0; }
 
     .work-list .cont_wrap { width: 100%; padding: 0 24px; }
     .work-list .cont_wrap ul { grid-template-columns: 1fr 1fr; gap: 4px; }
-
-    .work-list .top_btn { display: none; }
-    .work-list .btn_box .contact-us .rotating-image { display: none; }
 }
 
 /* work-detail */
 .work_detail { position: absolute; left: 0; top: 0; background: #fff; z-index: 20; }
 
-.work_detail .close-btn-work {   position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    z-index: 1000;}
 .work_detail .contents { width: 100%; display: flex; position: relative; letter-spacing: -0.01em; font-family: 'Pretendard', sans-serif; padding: 0 24px; }
 .work_detail .contents .side_info { padding: 120px 24px 300px; position: sticky; left: 0; top: 0; height: fit-content; flex-shrink: 0; }
 .work_detail .contents .side_info .title_box .text_orange { color: #f39700; text-transform: uppercase; padding: 12px 0; font-weight: 400; font-size: 16px; }

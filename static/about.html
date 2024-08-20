@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css-main/styles.css">
     <script defer src="js/main.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -24,7 +29,7 @@
         <div class="header-back">
             <a href="hyundai_art.html"><img src="images/common/arrow-left.png" alt="Back"></a>
         </div>
-         <div class="logo"><a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a></div>
+        <div class="logo"><a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a></div>
         <nav class="desktop-nav">
             <ul>
                 <li><a href="about.html">ABOUT</a></li>
@@ -231,6 +236,25 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="btn_box">
+                    <div class="top_btn">
+                        <button onclick="topFunction()"><i class="fa-solid fa-chevron-up"></i></button>
+                        <script>
+                            function topFunction() {
+                                window.scrollTo({
+                                    top: 0,
+                                    behavior: 'smooth' // 부드러운 스크롤
+                                });
+                            }
+                        </script>
+                    </div>
+
+                    <div class="contact-us">
+                        <a href="contact.html"><img class="rotating-image" src="images/common/contact-us.png"></a>
+                    </div>
+                </div>
+                <!--btn_box  -->
             </section>
         </main>
 

@@ -46,6 +46,9 @@
                         <a href="information.html">INFORMATION</a>
                     </div>
                 </li>
+                <li class="close_btn">
+                    <div class="close"><label for="closeBtnWork"><input type="checkbox" class="close-btn-work" id="closeBtnWork"><img src="images/common/close_btn.png" class="fa-xmark"></img></label></div>
+                </li>
             </ul>
         </nav>
         <div class="menu-icon" id="menu-icon">&#9776;</div>
@@ -77,69 +80,6 @@
             </ul>
         </div>
     </header>
-
-    <!-- <header class="header-pc">
-        <div class="logo"><a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a></div>
-        <nav class="desktop-nav">
-            <ul>
-                <li><a href="about.html">ABOUT</a></li>
-                <li class="dropdown">
-                    <a href="#works" id="works-button">WORKS</a>
-                    <div class="dropdown-content">
-                        <a href="works_all_type.html">ALL TYPE</a>
-                        <a href="magazine.html">MAGAZINE</a>
-                        <a href="editorial.html">EDITORIAL</a>
-                        <a href="goods.html">GOODS</a>
-                        <a href="promotion.html">PROMOTION</a>
-                        <a href="information.html">INFORMATION</a>
-                    </div>
-                </li>
-                <li class="close_btn">
-                    <div class="close"><label for="close_check"><input type="checkbox" id="close_check"><img src="images/common/close_btn.png" class="fa-xmark"></img></label></div>
-                    <script>
-                        function closeOnOff() {
-                            const checkBox = document.getElementById('close_check');
-
-                            if(checkBox.checked){
-                                $('.fa-xmark').style.opacity = '1';
-                            }else{
-                                $('.fa-xmark').style.opacity = '0';
-                            }
-                        }
-                        $('.close').click(function(){
-                            $('.work_detail').hide();
-                        });
-                    </script>
-                </li>
-            </ul>
-        </nav>
-    </header>    
-
-    <div class="header-mo">
-        <div class="page-header">
-            <div class="header-back">
-                <a href="hyundai_art.html"><img src="images/common/arrow-left.png" alt="Back"></a>
-            </div>
-
-            <div class="header-search">
-                <input type="text" placeholder="검색" id="search-input">
-                <button class="page-search" id="search-button">
-                    <img src="images/common/Search.png" alt="Search">
-                </button>
-            </div> 
-        </div> 
-        카테고리 메뉴 추가 -->
-        <!-- <div class="category-menu-wrapper">
-            <ul class="category-menu">
-                <li class="on"><a href="all.html">ALL</a></li>
-                <li><a href="magazine.html">MAGAZINE</a></li>
-                <li><a href="editorial.html">EDITORIAL</a></li>
-                <li><a href="goods.html">GOODS</a></li>
-                <li><a href="promotion.html">PROMOTION</a></li>
-                <li><a href="information.html">INFORMATION</a></li>
-            </ul>
-        </div>
-    </div>   -->
 
     <div class="wrapper"><!--wrapper -->
         
@@ -233,10 +173,10 @@
                     <ul>
                         <li class="arrow"><a href="works_all_type.html">&lt;&lt;</a></li>
                         <li class="arrow"><a href="works_all_type.html">&lt;</a></li>
-                        <li class="on"><a href="works_all_type.html">1</a></li>
+                        <li><a href="works_all_type.html">1</a></li>
                         <li><a href="works_all_type02.html">2</a></li>
                         <li><a href="works_all_type03.html">3</a></li>
-                        <li><a href="works_all_type04.html">4</a></li>
+                        <li class="on"><a href="works_all_type04.html">4</a></li>
                         <li class="arrow"><a href="works_all_type02.html">&gt;</a></li>
                         <li class="arrow"><a href="works_all_type04.html">&gt;&gt;</a></li>
                     </ul>
@@ -869,6 +809,8 @@
     
                         // 초기 currentIndex 설정
                         currentIndex = index;
+
+                        document.getElementById('closeBtnWork').checked = true;
                     });
                 });
     
@@ -901,6 +843,16 @@
                     // 버튼 숨기기
                     buttons.style.display = 'none';
                 });
+
+                function closeOnOff() {
+                        const checkBox = document.getElementById('closeBtnWork');
+
+                        if(checkBox.checked){
+                            $('.fa-xmark').style.opacity = '1';
+                        }else{
+                            $('.fa-xmark').style.opacity = '0';
+                        }
+                    }
             </script>
 
           
