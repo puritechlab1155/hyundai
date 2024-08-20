@@ -41,8 +41,9 @@ header .close_btn .close label img { opacity: 0; transition: all 0.3s; display: 
     }
 }
 @media only all and (max-width: 767px) {
-    .work-list .top_btn { display: none; }
-    .work-list .btn_box .contact-us .rotating-image { display: none; }
+    .btn_box { display: none; }
+    .top_btn { display: none; }
+    .btn_box .contact-us .rotating-image { display: none; }
 }
 
 /* page_about */
