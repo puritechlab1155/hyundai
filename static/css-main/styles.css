@@ -283,6 +283,7 @@ header .close_btn .close label img { display: block; opacity: 0; transition: all
     .work_detail_mo .contents .text_area .share_btn a .inner img { display: block; }
     .buttons {
         display: none !important;
+    }
 
 }
 
