@@ -531,11 +531,11 @@ header .category-menu-wrapper::-webkit-scrollbar {
 .work-list {  padding:120px 20px 40px; position: relative; }
 .work-list .cont_wrap { width: 95%; margin: 0 auto; }
 .work-list .cont_wrap ul { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; }
-.work-list .cont_wrap ul li { width: 100%; overflow: hidden; }
-.work-list .cont_wrap ul li a { width: 100%; height: fit-content; position: relative; cursor: pointer; }
+.work-list .cont_wrap ul li { width: 100%; overflow: visible; position: relative; z-index: 0; }
+.work-list .cont_wrap ul li a { width: 100%; height: fit-content; position: relative; cursor: pointer; display: block; }
 .work-list .cont_wrap ul li a img { width: 100%; display: block; }
-.work-list .cont_wrap ul li a .text_box { width: 100%; height: 100%; background: rgba(255, 255, 255, 0.5); position: absolute; left: 0; top: 0; box-sizing: border-box; padding: 4vw 50px; font-size: 1.3vw; font-weight:700; color: #101010; font-family: 'Pretendard', sans-serif; opacity: 0; transition: all 0.3s; box-sizing: border-box; }
-.work-list .cont_wrap ul li:hover a .text_box { opacity: 1; }
+.work-list .cont_wrap ul li a .text_box { width: 100%; height: 100%; background: rgba(255, 255, 255, 0.5); position: absolute; left: 0; top: 0; box-sizing: border-box; padding: 4vw 50px; font-size: 1.3vw; font-weight:700; color: #101010; font-family: 'Pretendard', sans-serif; opacity: 0; transition: all 0.3s; z-index: 1; transform: translateZ(0); }
+.work-list .cont_wrap ul li:hover a .text_box { -webkit-opacity: 1; opacity: 1; }
 .work-list .cont_wrap ul li a .text_box .text01 { text-decoration: underline; }
 .work-list .cont_wrap ul li a .text_box .text02 { padding: 10px 0 40px; }
 
