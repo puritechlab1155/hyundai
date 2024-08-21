@@ -157,7 +157,7 @@ header .close_btn .close label img { opacity: 0; transition: all 0.3s; display: 
 }
 
 /* work-list */
-.work-list { padding-top: 120px; padding-bottom: 40px; position: relative; }
+.work-list {  padding:120px 20px 40px; position: relative; }
 .work-list .cont_wrap { width: 95%; margin: 0 auto; }
 .work-list .cont_wrap ul { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; }
 .work-list .cont_wrap ul li { width: 100%; overflow: hidden; }
@@ -175,7 +175,7 @@ header .close_btn .close label img { opacity: 0; transition: all 0.3s; display: 
 .work-list .pagenation ul .arrow { padding: 0 3px; }
 
 @media only all and (max-width: 767px) {
-    .work-list { padding-top: 0; padding-bottom: 0; }
+    .work-list { padding: 0; }
 
     .work-list .cont_wrap { width: 100%; padding: 0 24px; }
     .work-list .cont_wrap ul { grid-template-columns: 1fr 1fr; gap: 4px; }
