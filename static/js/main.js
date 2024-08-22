@@ -364,15 +364,58 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
  // 페이지가 로드되면 애니메이션 실행 GSAP
- document.addEventListener("DOMContentLoaded", function () {
-    // .content 클래스가 있는 모든 요소에 애니메이션 적용
-    gsap.to(".pop-up", {
-        duration: 2,    // 애니메이션 지속 시간
-        y: 0,           // 원래 위치로 이동
-        opacity: 1,     // 투명도를 1로 설정 (보이게 함)
-        ease: "power2.out", // 부드러운 애니메이션
-        stagger: 0.5    // 각 요소마다 약간의 지연시간을 추가
+//  document.addEventListener("DOMContentLoaded", function () {
+//     // .content 클래스가 있는 모든 요소에 애니메이션 적용
+//     gsap.to(".pop-up", {
+//         duration: 2,    // 애니메이션 지속 시간
+//         y: 0,           // 원래 위치로 이동
+//         opacity: 1,     // 투명도를 1로 설정 (보이게 함)
+//         ease: "power2.out", // 부드러운 애니메이션
+//         stagger: 0.5    // 각 요소마다 약간의 지연시간을 추가
+//     });
+// });
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     gsap.registerPlugin(ScrollTrigger);
+
+//     gsap.to(".pop-up", {
+//         scrollTrigger: {
+//             trigger: ".pop-up",
+//             start: "top 80%", // 트리거가 뷰포트 상단에서 80% 지점에 도달했을 때 애니메이션 시작
+//             end: "bottom 60%", // 트리거가 뷰포트 하단에서 60% 지나면 끝
+//             toggleActions: "play none none none" // 스크롤할 때 한 번만 실행 (play 상태)
+//         },
+//         duration: 2,
+//         y: 0,
+//         opacity: 1,
+//         ease: "power2.out",
+//         stagger: 0.3
+//     });
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(".pop-up", {
+        y: 100,          // 시작 시 요소의 Y 좌표
+        opacity: 0       // 시작 시 요소가 보이지 않음
+    }, {
+        y: 0,            // 스크롤 후 Y 좌표
+        opacity: 1,      // 스크롤 후 요소가 완전히 보임
+        duration: 1.5,   // 애니메이션 지속 시간
+        ease: "power2.out",
+        stagger: 1.5,
+        scrollTrigger: {
+            trigger: ".pop-up",
+            start: "top 80%",      // 요소가 화면 상단에서 80% 지점에 도달할 때 애니메이션 시작
+            end: "bottom 20%",     // 트리거 종료를 더 빠르게 설정
+            toggleActions: "play none none reset",  // 다시 위로 스크롤할 때 애니메이션을 다시 실행
+            scrub: false,  // 스크롤에 따라 부드럽게 진행되지 않고, 트리거에 도달할 때마다 실행
+            markers: false // 디버그용 마커 숨기기
+        }
     });
 });
+
 
 
