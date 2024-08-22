@@ -395,51 +395,78 @@ document.addEventListener('DOMContentLoaded', function () {
 // });
 
 // GSAP POPUP
+// document.addEventListener("DOMContentLoaded", function () {
+//     gsap.registerPlugin(ScrollTrigger);
+
+//     gsap.fromTo(".pop-up", {
+//         y: 100,          // 시작 시 요소의 Y 좌표
+//         opacity: 0       // 시작 시 요소가 보이지 않음
+//     }, {
+//         y: 0,            // 스크롤 후 Y 좌표
+//         opacity: 1,      // 스크롤 후 요소가 완전히 보임
+//         duration: 1.5,   // 애니메이션 지속 시간
+//         ease: "power2.out",
+//         stagger: 1.5,
+//         scrollTrigger: {
+//             trigger: ".pop-up",
+//             start: "top 80%",      // 요소가 화면 상단에서 80% 지점에 도달할 때 애니메이션 시작
+//             end: "bottom 20%",     // 트리거 종료를 더 빠르게 설정
+//             toggleActions: "play none none reset",  // 다시 위로 스크롤할 때 애니메이션을 다시 실행
+//             scrub: false,  // 스크롤에 따라 부드럽게 진행되지 않고, 트리거에 도달할 때마다 실행
+//             markers: false // 디버그용 마커 숨기기
+//         }
+//     });
+// });
+
+// // GSAP
+// document.addEventListener("DOMContentLoaded", function () {
+//     // 리스트 요소들을 가져옵니다.
+//     const lists = document.querySelectorAll('.detail_list .page');
+
+//     // 각 리스트 요소에 클릭 이벤트와 애니메이션 적용
+//     lists.forEach((list) => {
+//         list.addEventListener('click', function () {
+//             gsap.fromTo(list, {
+//                 y: 100,          // 시작 위치 (아래에서 올라오는 느낌)
+//                 opacity: 0,      // 시작 시 투명
+//                 scale: 0.8       // 작게 시작
+//             }, {
+//                 y: 0,            // 최종 위치
+//                 opacity: 1,      // 완전히 보임
+//                 scale: 1,        // 원래 크기
+//                 duration: 1.2,   // 애니메이션 지속 시간
+//                 ease: "power3.out"  // 부드러운 애니메이션
+//             });
+//         });
+//     });
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(ScrollTrigger);
+    const popUpElements = document.querySelectorAll('.pop-up');
 
-    gsap.fromTo(".pop-up", {
-        y: 100,          // 시작 시 요소의 Y 좌표
-        opacity: 0       // 시작 시 요소가 보이지 않음
-    }, {
-        y: 0,            // 스크롤 후 Y 좌표
-        opacity: 1,      // 스크롤 후 요소가 완전히 보임
-        duration: 1.5,   // 애니메이션 지속 시간
-        ease: "power2.out",
-        stagger: 1.5,
-        scrollTrigger: {
-            trigger: ".pop-up",
-            start: "top 80%",      // 요소가 화면 상단에서 80% 지점에 도달할 때 애니메이션 시작
-            end: "bottom 20%",     // 트리거 종료를 더 빠르게 설정
-            toggleActions: "play none none reset",  // 다시 위로 스크롤할 때 애니메이션을 다시 실행
-            scrub: false,  // 스크롤에 따라 부드럽게 진행되지 않고, 트리거에 도달할 때마다 실행
-            markers: false // 디버그용 마커 숨기기
-        }
-    });
-});
+    function handleScroll() {
+        popUpElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const elementTop = rect.top;
+            const elementBottom = rect.bottom;
 
-// GSAP
-document.addEventListener("DOMContentLoaded", function () {
-    // 리스트 요소들을 가져옵니다.
-    const lists = document.querySelectorAll('.detail_list .page');
-
-    // 각 리스트 요소에 클릭 이벤트와 애니메이션 적용
-    lists.forEach((list) => {
-        list.addEventListener('click', function () {
-            gsap.fromTo(list, {
-                y: 100,          // 시작 위치 (아래에서 올라오는 느낌)
-                opacity: 0,      // 시작 시 투명
-                scale: 0.8       // 작게 시작
-            }, {
-                y: 0,            // 최종 위치
-                opacity: 1,      // 완전히 보임
-                scale: 1,        // 원래 크기
-                duration: 1.2,   // 애니메이션 지속 시간
-                ease: "power3.out"  // 부드러운 애니메이션
-            });
+            // 요소가 화면에 보이기 시작하는 조건
+            if (elementTop < window.innerHeight && elementBottom > 0) {
+                el.classList.add('show');
+            } else {
+                el.classList.remove('show');
+            }
         });
-    });
+    }
+
+    // 스크롤할 때마다 함수 실행
+    window.addEventListener('scroll', handleScroll);
+
+    // 페이지 로드 시 요소가 이미 보이는지 체크
+    handleScroll();
 });
+
+
 
 
 
