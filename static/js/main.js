@@ -86,25 +86,29 @@ document.addEventListener('DOMContentLoaded', function() {
 //     });
 // });
 
-// 모바일 메뉴바 드롭다운
+
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById('menu-icon');
     const mobileMenu = document.getElementById('mobile-menu');
     const closeIcon = document.getElementById('close-icon');
-    const animationDuration = 600; // 애니메이션 지속 시간 (500ms)
+    const animationDuration = 500; // 애니메이션 지속 시간 (500ms)
+
+    // 초기 상태 설정 (opacity 0과 translateY 상태로 숨기고 있지만 visibility는 visible로 설정)
+    mobileMenu.style.transition = `opacity ${animationDuration}ms ease, transform ${animationDuration}ms ease`;
+    mobileMenu.style.opacity = '0';
+    mobileMenu.style.transform = 'translateY(-100%)';
+    mobileMenu.style.visibility = 'visible'; // visibility는 유지
 
     menuIcon.addEventListener('click', function () {
-        // 모바일 메뉴 보이기
         mobileMenu.classList.add('show'); // 모바일 메뉴 보이기
-        mobileMenu.style.transition = `opacity ${animationDuration}ms ease, transform ${animationDuration}ms ease`;
+        // 첫 번째 클릭에서 visibility를 설정하고 나머지 애니메이션을 적용
+        mobileMenu.style.visibility = 'visible';
         mobileMenu.style.opacity = '1';
         mobileMenu.style.transform = 'translateY(0)';
-        mobileMenu.style.visibility = 'visible';
     });
 
     closeIcon.addEventListener('click', function () {
         // 모바일 메뉴 숨기기
-        mobileMenu.style.transition = `opacity ${animationDuration}ms ease, transform ${animationDuration}ms ease`;
         mobileMenu.style.opacity = '0';
         mobileMenu.style.transform = 'translateY(-100%)';
 
@@ -124,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 
 
 
