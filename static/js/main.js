@@ -363,4 +363,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+ // 페이지가 로드되면 애니메이션 실행 GSAP
+ document.addEventListener("DOMContentLoaded", function () {
+    // .content 클래스가 있는 모든 요소에 애니메이션 적용
+    gsap.to(".pop-up", {
+        duration: 2,    // 애니메이션 지속 시간
+        y: 0,           // 원래 위치로 이동
+        opacity: 1,     // 투명도를 1로 설정 (보이게 함)
+        ease: "power2.out", // 부드러운 애니메이션
+        stagger: 0.5    // 각 요소마다 약간의 지연시간을 추가
+    });
+});
+
 

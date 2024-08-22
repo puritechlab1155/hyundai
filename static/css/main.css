@@ -66,6 +66,12 @@ header .close_btn .close label img { opacity: 0; transition: all 0.3s; display: 
     .btn_box .contact-us .rotating-image { display: none; }
 }
 
+/* GSAP */
+.pop-up {
+    opacity: 0;
+    transform: translateY(100px); /* 컨텐츠가 처음에 아래에 위치하게 설정 */
+}
+
 
 /* header */
 header {
