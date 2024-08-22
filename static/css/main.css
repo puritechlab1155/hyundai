@@ -301,7 +301,7 @@ footer .office-info p { margin-top: 10px; }
 
 .footer-content-mobile > div:nth-child(5) { position:absolute; right:10%; bottom:29px; position: fixed; z-index: 27; }
 
-.footer-content-mobile  .contact-us .rotating-image {animation: rotate 2.5s linear infinite; width: 60px; height: 60px;}
+.footer-content-mobile  .contact-us .rotating-image {animation: rotate 4.5s linear infinite; width: 60px; height: 60px;}
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
