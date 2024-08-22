@@ -394,6 +394,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //     });
 // });
 
+// GSAP POPUP
 document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -416,6 +417,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// GSAP
+document.addEventListener("DOMContentLoaded", function () {
+    // 리스트 요소들을 가져옵니다.
+    const lists = document.querySelectorAll('.detail_list .page');
+
+    // 각 리스트 요소에 클릭 이벤트와 애니메이션 적용
+    lists.forEach((list) => {
+        list.addEventListener('click', function () {
+            gsap.fromTo(list, {
+                y: 100,          // 시작 위치 (아래에서 올라오는 느낌)
+                opacity: 0,      // 시작 시 투명
+                scale: 0.8       // 작게 시작
+            }, {
+                y: 0,            // 최종 위치
+                opacity: 1,      // 완전히 보임
+                scale: 1,        // 원래 크기
+                duration: 1.2,   // 애니메이션 지속 시간
+                ease: "power3.out"  // 부드러운 애니메이션
+            });
+        });
+    });
+});
+
 
 
 
