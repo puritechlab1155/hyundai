@@ -51,7 +51,7 @@ header .close_btn .close label img { opacity: 0; transition: all 0.3s; display: 
     color: #aaa; background: rgba(255, 255, 255, 0.7); font-size: 20px;
     cursor: pointer;
 }
-.btn_box .contact-us .rotating-image { animation: rotate 2.5s linear infinite; }
+.btn_box .contact-us .rotating-image { animation: rotate 4.5s linear infinite; }
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -84,8 +84,11 @@ header .logo {font-size: 24px; font-weight: bold; display: block !important;}
 header nav { height: auto; }
 header nav ul { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
 header nav ul li { margin-right: 40px; max-width: 68px; box-sizing: border-box; text-align: center; }
-header nav ul li a:hover { font-weight: 700; }
-header nav ul li a { text-decoration: none; color: black; font-size: 20px; transition: all 0.2s; }
+
+header nav ul li a { text-decoration: none; color: #101010; font-size: 20px; font-weight: 400;  transition: all 0.3s ease; /* 부드러운 전환 */}
+header nav ul li a:hover { color: #F39700; }
+
+
 header .desktop-nav { position: absolute; right: 0;}
 
 /* header dropdown */
@@ -94,7 +97,7 @@ header .category-menu-wrapper {display: none;}
 header .dropdown-content {
     display: none;
     position: absolute;
-    right: 60px;
+    right: 40px;
     background-color: white;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     z-index: 30;
@@ -210,7 +213,7 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
     header .desktop-nav {display: none;}
 
     header .mobile-menu {
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 0;
     left: 0;
@@ -221,18 +224,19 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
     flex-direction: column;
 }
 
-header .mobile-menu.show { display: flex;}
+header .mobile-menu.show { display: flex;  
+ }
+
 header .mobile-menu-header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 20px;
     background-color: white;
-    border-bottom: 1px solid #ccc;
 }
 
 header .mobile-menu-header img { height: 40px;}
-header .mobile-menu .mobile-menu-header .close-icon {font-size: 28px; cursor: pointer; margin-right: 24px;}
+header .mobile-menu .mobile-menu-header .close-icon {font-size: 28px; cursor: pointer; margin-right:20px;}
 header .mobile-menu nav ul {list-style: none; padding: 0;display: block;}
 header .mobile-menu nav ul li {margin: 40px 24px;}
 header .mobile-menu nav ul li a {text-decoration: none;color: black; font-size: 28px;}
@@ -291,6 +295,7 @@ footer {height: 377px;}
 .footer-content-mobile { display: block;}
 .footer-content-pc { display: none;}
 .footer-content-mobile{display: flex; flex-direction: column; position: relative; padding: 56px 24px 40px; gap:32px;}
+.footer-content-mobile .company-info p{ margin-top: 10px;}
 
 footer .office-info p { margin-top: 10px; }
 

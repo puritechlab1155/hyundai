@@ -60,30 +60,73 @@ document.addEventListener('DOMContentLoaded', function() {
             dropdownContent.classList.remove('show'); // 메뉴 닫기
         }
     });
+});
 
     // 모바일 메뉴바 드롭다운
+//     const menuIcon = document.getElementById('menu-icon');
+//     const mobileMenu = document.getElementById('mobile-menu');
+//     const closeIcon = document.getElementById('close-icon');
+
+//     menuIcon.addEventListener('click', function() {
+//         mobileMenu.classList.add('show'); // 모바일 메뉴 보이기
+//     });
+
+//     closeIcon.addEventListener('click', function() {
+//         mobileMenu.classList.remove('show'); // 모바일 메뉴 숨기기
+//     });
+
+//     const searchButton = document.getElementById('search-button');
+//     const searchInput = document.getElementById('search-input');
+
+//     searchButton.addEventListener('click', function() {
+//         const query = searchInput.value;
+//         if (query) {
+//             window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+//         }
+//     });
+// });
+
+// 모바일 메뉴바 드롭다운
+document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById('menu-icon');
     const mobileMenu = document.getElementById('mobile-menu');
     const closeIcon = document.getElementById('close-icon');
+    const animationDuration = 600; // 애니메이션 지속 시간 (500ms)
 
-    menuIcon.addEventListener('click', function() {
+    menuIcon.addEventListener('click', function () {
+        // 모바일 메뉴 보이기
         mobileMenu.classList.add('show'); // 모바일 메뉴 보이기
+        mobileMenu.style.transition = `opacity ${animationDuration}ms ease, transform ${animationDuration}ms ease`;
+        mobileMenu.style.opacity = '1';
+        mobileMenu.style.transform = 'translateY(0)';
+        mobileMenu.style.visibility = 'visible';
     });
 
-    closeIcon.addEventListener('click', function() {
-        mobileMenu.classList.remove('show'); // 모바일 메뉴 숨기기
+    closeIcon.addEventListener('click', function () {
+        // 모바일 메뉴 숨기기
+        mobileMenu.style.transition = `opacity ${animationDuration}ms ease, transform ${animationDuration}ms ease`;
+        mobileMenu.style.opacity = '0';
+        mobileMenu.style.transform = 'translateY(-100%)';
+
+        // 애니메이션이 끝난 후 visibility를 hidden으로 설정
+        setTimeout(() => {
+            mobileMenu.style.visibility = 'hidden';
+        }, animationDuration);
     });
 
     const searchButton = document.getElementById('search-button');
     const searchInput = document.getElementById('search-input');
 
-    searchButton.addEventListener('click', function() {
+    searchButton.addEventListener('click', function () {
         const query = searchInput.value;
         if (query) {
             window.location.href = `search.html?q=${encodeURIComponent(query)}`;
         }
     });
 });
+
+
+
 
 //-----------------------------------------------------------------------------------
 
