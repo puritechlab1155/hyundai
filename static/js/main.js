@@ -333,70 +333,96 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-//메인 팝업 창 
+// // 메인 팝업 창
 // document.addEventListener("DOMContentLoaded", function () {
-//     // localStorage 확인 후 모달 표시 여부 결정
-//     if (localStorage.getItem("hideModal") !== "true") {
-//         document.getElementById("modal-area").style.display = "block";
-//     } else {
-//         document.getElementById("modal-area").style.display = "none";
+//     const modal = document.getElementById("modal-area");
+//     const closeButton = document.getElementById("close-modal");
+//     const animationDuration = 500; // 애니메이션 지속 시간 (ms)
+
+//     // 닫기 버튼 클릭 시 애니메이션 후 모달 숨기기
+//     closeButton.addEventListener("click", function () {
+//         modal.style.transition = `opacity ${animationDuration}ms ease`;
+//         modal.style.opacity = '0'; // 투명하게 만들기
+        
+//         // 애니메이션이 끝난 후 visibility를 hidden으로 설정
+//         setTimeout(function () {
+//             modal.style.visibility = 'hidden';
+//         }, animationDuration);
+//     });
+
+//     // 모달이 다시 보여야 할 때
+//     function showModal() {
+//         modal.style.visibility = 'visible';
+//         modal.style.opacity = '1'; // 다시 보이게 하기
 //     }
 
-//     // "다시 보지 않기" 버튼 클릭 시
-//     document.getElementById("dont-show-again").addEventListener("click", function () {
-//         localStorage.setItem("hideModal", "true"); // 다시 보지 않기 설정
-//         document.getElementById("modal-area").style.display = "none"; // 모달 닫기
-//     });
-
-//     // "닫기" 버튼 클릭 시
-//     document.getElementById("close-modal").addEventListener("click", function () {
-//         document.getElementById("modal-area").style.display = "none"; // 모달 닫기
-//     });
+//     // 페이지 로드 시 모달을 보여줌
+//     showModal();
 // });
 
-
+// 메인 팝업 창
 document.addEventListener("DOMContentLoaded", function () {
-    // // 하루의 밀리초 값
-    // const oneDay = 24 * 60 * 60 * 1000;
+    const modal = document.getElementById("modal-area");
+    const closeButton = document.getElementById("close-modal");
+    const dontShowAgainButton = document.getElementById("dont-show-again");
+    const animationDuration = 500; // 애니메이션 지속 시간 (ms)
 
-    // // 현재 시간
-    // const now = new Date().getTime();
+    // 하루의 밀리초 값
+    const oneDay = 24 * 60 * 60 * 1000;
+    const now = new Date().getTime();
 
-    // // localStorage에 저장된 hideModalTime을 확인
-    // const hideModalTime = localStorage.getItem("hideModalTime");
+    // localStorage에 저장된 시간이 있는지 확인
+    const hideModalTime = localStorage.getItem("hideModalTime");
 
-    // // 하루가 지났는지 확인하는 함수
-    // function isOneDayPassed() {
-    //     if (!hideModalTime) return false; // 저장된 시간이 없으면 하루가 지난 것이 아님
-    //     return now - hideModalTime > oneDay; // 현재 시간과 저장된 시간의 차이가 하루를 넘었는지 확인
-    // }
+    // 하루가 지났는지 확인하는 함수
+    function isOneDayPassed() {
+        if (!hideModalTime) return false;
+        return now - hideModalTime > oneDay;
+    }
 
-    // // 모달 표시 여부 결정
-    // if (localStorage.getItem("hideModal") !== "true" || isOneDayPassed()) {
-    //     document.getElementById("modal-area").style.display = "block";
+    // 모달 표시 여부 결정
+    if (localStorage.getItem("hideModal") !== "true" || isOneDayPassed()) {
+        // 하루가 지났으면 다시 보여주고 localStorage 초기화
+        if (isOneDayPassed()) {
+            localStorage.removeItem("hideModal");
+            localStorage.removeItem("hideModalTime");
+        }
+        showModal();
+    } else {
+        modal.style.display = "none"; // 모달 숨기기
+    }
 
-    //     // 하루가 지났으면 localStorage를 초기화 (모달을 다시 보이게 하기 위해)
-    //     if (isOneDayPassed()) {
-    //         localStorage.removeItem("hideModal");
-    //         localStorage.removeItem("hideModalTime");
-    //     }
-    // } else {
-    //     document.getElementById("modal-area").style.display = "none";
-    // }
-
-    // // "다시 보지 않기" 버튼 클릭 시
-    // document.getElementById("dont-show-again").addEventListener("click", function () {
-    //     localStorage.setItem("hideModal", "true"); // 다시 보지 않기 설정
-    //     localStorage.setItem("hideModalTime", now); // 현재 시간 저장
-    //     document.getElementById("modal-area").style.display = "none"; // 모달 닫기
-    // });
-
-    // "닫기" 버튼 클릭 시
-    document.getElementById("close-modal").addEventListener("click", function () {
-        document.getElementById("modal-area").style.display = "none"; // 모달 닫기
+    // 닫기 버튼 클릭 시 애니메이션 후 모달 숨기기
+    closeButton.addEventListener("click", function () {
+        hideModal();
     });
+
+    // "다시 보지 않기" 버튼 클릭 시
+    dontShowAgainButton.addEventListener("click", function () {
+        localStorage.setItem("hideModal", "true");
+        localStorage.setItem("hideModalTime", now); // 현재 시간 저장
+        hideModal(); // 모달 숨기기
+    });
+
+    // 모달을 숨기는 함수
+    function hideModal() {
+        modal.style.transition = `opacity ${animationDuration}ms ease`;
+        modal.style.opacity = '0';
+        
+        // 애니메이션이 끝난 후 모달 완전히 숨기기
+        setTimeout(function () {
+            modal.style.visibility = 'hidden';
+        }, animationDuration);
+    }
+
+    // 모달을 보이는 함수
+    function showModal() {
+        modal.style.visibility = 'visible';
+        modal.style.opacity = '1';
+    }
 });
+
+
 
 
 

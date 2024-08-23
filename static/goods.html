@@ -86,7 +86,7 @@
         
         <main>
             <!-- 각 페이지의 메인 콘텐츠 -->
-            <section id="container" class="work-list pop-up">
+            <section id="container" class="work-list">
                 <div class="cont_wrap">
                     <ul class="list_page03">
                         <li>
@@ -677,26 +677,26 @@
                         }
                     }
                 </script>
-
-                <div class="btn_box">
-                    <div class="top_btn">
-                        <button onclick="topFunction()"><i class="fa-solid fa-chevron-up"></i></button>
-                        <script>
-                            function topFunction() {
-                                window.scrollTo({
-                                    top: 0, 
-                                    behavior: 'smooth' // 부드러운 스크롤
-                                });
-                            }
-                        </script>
-                    </div>
-
-                    <div class="contact-us">
-                        <a href="contact.html"><img class="rotating-image" src="images/common/contact-us.png"></a>
-                    </div>
-                </div><!-- //btn_box -->
             </section>
         </main>
+
+        <div class="btn_box">
+            <div class="top_btn">
+                <button onclick="topFunction()"><i class="fa-solid fa-chevron-up"></i></button>
+                <script>
+                    function topFunction() {
+                        window.scrollTo({
+                            top: 0, 
+                            behavior: 'smooth' // 부드러운 스크롤
+                        });
+                    }
+                </script>
+            </div>
+
+            <div class="contact-us">
+                <a href="contact.html"><img class="rotating-image" src="images/common/contact-us.png"></a>
+            </div>
+        </div><!-- //btn_box -->
 
     </div><!--wrapper -->
 
