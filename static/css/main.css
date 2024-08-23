@@ -800,3 +800,9 @@ header .category-menu-wrapper::-webkit-scrollbar {
 .modal_area .modal .button_box .btn01 { position: relative; }
 .modal_area .modal .button_box .btn01::after { content: ''; width: 1px; height: 40%; background: #fff; position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
 .modal_area .modal .button_box button { color: #fff; padding: 20px; font-size: 17px; font-family: 'Pretendard'; font-weight: 400; }
+
+@media only all and (max-width: 767px) {
+.modal_area { display: block; }
+.modal_area .modal { width: 80%; }
+.modal_area .modal .img_box img { width: 100%; }
+}
