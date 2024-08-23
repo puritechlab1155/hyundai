@@ -51,7 +51,7 @@ header .close_btn .close label img { opacity: 0; transition: all 0.3s; display: 
     color: #aaa; background: rgba(255, 255, 255, 0.7); font-size: 20px;
     cursor: pointer;
 }
-.btn_box .contact-us .rotating-image { animation: rotate 4.5s linear infinite; }
+.btn_box .contact-us .rotating-image { animation: rotate 6s linear infinite; }
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -462,7 +462,7 @@ header .category-menu-wrapper::-webkit-scrollbar {
 
 .page_about .contents .section02 .inner02 { width: 75%; margin: 80px auto 0; padding: 0 24px; }
 .page_about .contents .section02 .inner02 .item_box { display: flex; gap: 26px 10px; padding: 0 24px; }
-.page_about .contents .section02 .inner02 .item_box .item { border: 1px solid #f39700; padding: 40px; width: 100%; max-width: 222px; height: 357px; position: relative; }
+.page_about .contents .section02 .inner02 .item_box .item { border: 1px solid #f39700; padding: 3% 2% 2% 2%; width: 100%; max-width: 222px; height: 357px; position: relative; }
 .page_about .contents .section02 .inner02 .item_box .item::before { content: ''; width: 16px; height: 32px; background: #f39700; position: absolute; left: 40px; top: 0; transform: translateY(-50%); }
 .page_about .contents .section02 .inner02 .item_box .item .title_orange { font-size: 17px; font-weight: 500; color: #f39700; padding-bottom: 4px; }
 .page_about .contents .section02 .inner02 .item_box .item .item_title { text-transform: uppercase; font-weight: 300; font-size: 22px; line-height: 140%; }
@@ -802,7 +802,7 @@ header .category-menu-wrapper::-webkit-scrollbar {
 .modal_area .modal .button_box button { color: #fff; padding: 20px; font-size: 17px; font-family: 'Pretendard'; font-weight: 400; }
 
 @media only all and (max-width: 767px) {
-.modal_area { display: block; }
+.modal_area { display: block; z-index: 9;}
 .modal_area .modal { width: 80%; }
 .modal_area .modal .img_box img { width: 100%; }
 }
