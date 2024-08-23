@@ -72,62 +72,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-    // 모바일 메뉴바 드롭다운
-//     const menuIcon = document.getElementById('menu-icon');
-//     const mobileMenu = document.getElementById('mobile-menu');
-//     const closeIcon = document.getElementById('close-icon');
-
-//     menuIcon.addEventListener('click', function() {
-//         mobileMenu.classList.add('show'); // 모바일 메뉴 보이기
-//     });
-
-//     closeIcon.addEventListener('click', function() {
-//         mobileMenu.classList.remove('show'); // 모바일 메뉴 숨기기
-//     });
-
-//     const searchButton = document.getElementById('search-button');
-//     const searchInput = document.getElementById('search-input');
-
-//     searchButton.addEventListener('click', function() {
-//         const query = searchInput.value;
-//         if (query) {
-//             window.location.href = `search.html?q=${encodeURIComponent(query)}`;
-//         }
-//     });
-// });
-
-
+// 모바일 메뉴바 드롭다운
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById('menu-icon');
     const mobileMenu = document.getElementById('mobile-menu');
     const closeIcon = document.getElementById('close-icon');
     const animationDuration = 500; // 애니메이션 지속 시간 (500ms)
 
-    // 초기 상태 설정 (opacity 0과 translateY 상태로 숨기고 있지만 visibility는 visible로 설정)
-    mobileMenu.style.transition = `opacity ${animationDuration}ms ease, transform ${animationDuration}ms ease`;
-    mobileMenu.style.opacity = '0';
-    mobileMenu.style.transform = 'translateY(-100%)';
-    mobileMenu.style.visibility = 'visible'; // visibility는 유지
-
     menuIcon.addEventListener('click', function () {
-        mobileMenu.classList.add('show'); // 모바일 메뉴 보이기
-        // 첫 번째 클릭에서 visibility를 설정하고 나머지 애니메이션을 적용
-        mobileMenu.style.visibility = 'visible';
-        mobileMenu.style.opacity = '1';
-        mobileMenu.style.transform = 'translateY(0)';
+        mobileMenu.style.visibility = 'visible'; // 먼저 visibility를 visible로 설정
+        mobileMenu.classList.add('show'); // 애니메이션 시작
     });
 
     closeIcon.addEventListener('click', function () {
-        // 모바일 메뉴 숨기기
-        mobileMenu.style.opacity = '0';
-        mobileMenu.style.transform = 'translateY(-100%)';
+        mobileMenu.classList.remove('show'); // 애니메이션 숨기기 시작
 
         // 애니메이션이 끝난 후 visibility를 hidden으로 설정
         setTimeout(() => {
             mobileMenu.style.visibility = 'hidden';
         }, animationDuration);
     });
-
+    // 검색기능
     const searchButton = document.getElementById('search-button');
     const searchInput = document.getElementById('search-input');
 
@@ -140,39 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-
-//-----------------------------------------------------------------------------------
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const menuIcon = document.getElementById('menu-icon');
-//     const mobileMenu = document.getElementById('mobile-menu');
-//     const closeIcon = document.getElementById('close-icon');
-
-//     // 메뉴 열기
-//     menuIcon.addEventListener('click', function() {
-//         mobileMenu.classList.add('show');
-//     });
-
-//     // 메뉴 닫기
-//     closeIcon.addEventListener('click', function() {
-//         mobileMenu.classList.remove('show');
-//     });
-
-//     // 검색 기능
-//     const searchButton = document.getElementById('search-button');
-//     const searchInput = document.getElementById('search-input');
-
-//     searchButton.addEventListener('click', function() {
-//         const query = searchInput.value;
-//         if (query) {
-//             window.location.href = `search.html?q=${encodeURIComponent(query)}`;
-//         }
-//     });
-// });
-
-//------------------------------------
 
 document.addEventListener('DOMContentLoaded', function() {
     // 모든 footer-container 요소들을 선택
