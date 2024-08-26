@@ -15,7 +15,7 @@
 
 * {margin: 0;padding: 0; box-sizing: border-box;}
 
-html, body {margin: 0;padding: 0;width: 100%; font-family: 'Pretendard', sans-serif;line-height: 1.6; overflow-x: hidden}
+html, body {margin: 0;padding: 0;width: 100%; font-family: 'Pretendard', sans-serif;line-height: 1.6;}
 body {
    /*페이지가 항상 전체 화면을 차지하도록 */
    display: flex;flex-direction: column;
@@ -61,27 +61,21 @@ header .close_btn .close label img { opacity: 0; transition: all 0.3s; display: 
     }
 }
 @media only all and (max-width: 767px) {
+    html, body { overflow-x:hidden}
     .btn_box { display: none; }
     .top_btn { display: none; }
     .btn_box .contact-us .rotating-image { display: none; }
 }
 
-/* GSAP */
-/* .pop-up {
+.pop-up {
     opacity: 0;
-    transform: translateY(100px); /* 컨텐츠가 처음에 아래에 위치하게 설정 */
-  
-
-
-    .pop-up {
-        opacity: 0;
-        transform: translateY(100px); /* 처음에 아래에 있다가 */
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .pop-up.show {
-        opacity: 1;
-        transform: translateY(0); /* 원래 위치로 올라옴 */
-    }
+    transform: translateY(100px); /* 처음에 아래에 있다가 */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.pop-up.show {
+    opacity: 1;
+    transform: translateY(0); /* 원래 위치로 올라옴 */
+}
 
 /* header */
 header {
@@ -698,6 +692,7 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
     .work_detail_mo .contents .text_area .share_btn a .inner img { display: block; }
 
     .buttons {
+        display: block !important;
         margin-left:15px;
     }
     .buttons #prevBtn,

@@ -101,6 +101,12 @@
                             <img src="../thumnail_images/magazine/seoulshinbo/shinbo-detail03.jpg" alt="">
                         </article>
                     </div><!-- //main_conts -->
+
+                    <!-- 이전, 다음 버튼 -->
+                    <div class="buttons">
+                        <button id="prevBtn"><img src="../images/common/icon-prev.png"></button>
+                        <button id="nextBtn"><img src="../images/common/icon-next.png"></button>
+                    </div>
         
                     <div class="text_area">
                         <div class="text">
@@ -180,6 +186,72 @@
             </div>
         </div>
     </footer>
+
+    <!-- <script>
+
+const htmlFiles = [
+    './detail-seoulshinbo.html',
+    './detail-mkomir.html',
+    './detail-kipa.html',
+    './detail-ipedu.html',
+    './detail-cwit.html',
+    './detail-corp2020.html',
+    './detail-mabik.html',
+    './detail-corp2021.html',
+    './detail-convergence.html',
+    './detail-ripc.html',
+    './detail-ripcex.html',
+    './detail-bizinfo.html',
+    './detail-bizinfostat.html',
+    './detail-its.html',
+    './detail-donghaeng.html',
+    './detail-anniv.html',
+    './detail-regional.html',
+    './detail-ekomir.html',
+    './detail-kwo.html',
+    './detail-swb2021.html',
+    './detail-motors.html',
+    './detail-swb2022.html',
+    './detail-gnkit.html',
+    './detail-npc.html',
+    './detail-mcc.html',
+    './detail-hac.html',
+    './detail-wlc.html'
+];
+
+let currentIndex = 0;
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadHtmlFile(currentIndex);  // 첫 번째 HTML 파일 로드
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : htmlFiles.length - 1;
+        loadHtmlFile(currentIndex);
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        currentIndex = (currentIndex < htmlFiles.length - 1) ? currentIndex + 1 : 0;
+        loadHtmlFile(currentIndex);
+    });
+});
+
+function loadHtmlFile(index) {
+    fetch(htmlFiles[index])
+        .then(response => response.text())
+        .then(data => {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = data;
+
+            const newContent = tempDiv.querySelector('section.work_detail_mo .contents');
+            if (newContent) {
+                document.querySelector('.work_detail_mo .contents').innerHTML = newContent.innerHTML;
+                applySlideEffect();
+            }
+        })
+        .catch(error => console.error('Error loading HTML file:', error));
+}
+
+</script> -->
 
 </body>
 </html>
