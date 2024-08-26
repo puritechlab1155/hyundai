@@ -368,7 +368,7 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
     .header-mo { display: block;}
     .header-mo .page-header { padding: 16px; display: flex; gap: 10px;}
     .header-back { display: block !important; margin-top: 12px; }
-    .header-back img { display: block; width: 30px; }
+    .header-back img { display: block; width: 20px; }
 
     .header-mo .header-search { display: flex;
         border-radius: 25px;
@@ -696,6 +696,16 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
     .work_detail_mo .contents .text_area .share_btn a .inner { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; gap: 16px; }
     .work_detail_mo .contents .text_area .share_btn a .inner span { font-family: 'Pretendard', sans-serif; font-weight: 500; font-size: 14px; line-height: 130%; color: #101010; }
     .work_detail_mo .contents .text_area .share_btn a .inner img { display: block; }
+
+    .buttons {
+        margin-left:15px;
+    }
+    .buttons #prevBtn,
+    .buttons #nextBtn {
+        font-size: 15px;
+        padding: 10px 8px 7px;
+        margin: 0 2px;
+    }
     /* .buttons {display: none !important;} */
 }
 
