@@ -461,7 +461,7 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
 
 .page_about .contents .section02 .inner02 { width: 100%; margin: 80px auto 0; padding: 0 24px; }
 .page_about .contents .section02 .inner02 .item_box { display: flex; gap: 26px 10px; padding: 0 24px; justify-content: center; }
-.page_about .contents .section02 .inner02 .item_box .item { border: 1px solid #f39700; padding: 3% 2% 2% 2%; width: 100%; max-width: 222px; height: 357px; position: relative; }
+.page_about .contents .section02 .inner02 .item_box .item { border: 1px solid #f39700; padding: 40px; width: 100%; max-width: 222px; height: 357px; position: relative; }
 .page_about .contents .section02 .inner02 .item_box .item::before { content: ''; width: 16px; height: 32px; background: #f39700; position: absolute; left: 40px; top: 0; transform: translateY(-50%); }
 .page_about .contents .section02 .inner02 .item_box .item .title_orange { font-size: 17px; font-weight: 500; color: #f39700; padding-bottom: 4px; }
 .page_about .contents .section02 .inner02 .item_box .item .item_title { text-transform: uppercase; font-weight: 300; font-size: 22px; line-height: 140%; }
