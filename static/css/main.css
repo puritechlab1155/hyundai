@@ -51,15 +51,6 @@ header .close_btn .close label img { opacity: 0; transition: all 0.3s; display: 
     color: #aaa; background: rgba(255, 255, 255, 0.7); font-size: 20px;
     cursor: pointer;
 }
-.btn_box .contact-us .rotating-image { animation: rotate 6s linear infinite; }
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
 @media only all and (max-width: 767px) {
     html, body { overflow-x:hidden}
     .btn_box { display: none; }
