@@ -58,10 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 드롭다운 닫기
-    worksButton.addEventListener('mouseleave', function(event) {
-        // 마우스가 버튼에서 나갔을 때 드롭다운이 사라지도록 설정
-        dropdownContent.classList.remove('show');
-    });
+    // worksButton.addEventListener('mouseleave', function(event) {
+    //     // 마우스가 버튼에서 나갔을 때 드롭다운이 사라지도록 설정
+    //     dropdownContent.classList.remove('show');
+    // });
 
     // 드롭다운 메뉴에 마우스를 올렸을 때 드롭다운 유지
     dropdownContent.addEventListener('mouseenter', function(event) {
