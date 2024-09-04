@@ -51,26 +51,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const worksButton = document.getElementById('works-button');
     const dropdownContent = document.querySelector('.dropdown-content');
 
-    // 드롭다운 토글 함수
-    function toggleDropdown() {
-        dropdownContent.classList.toggle('show'); // 드롭다운 메뉴 보이기/숨기기
-    }
-
-    // 드롭다운 열기/닫기 기능 제어
+    // 드롭다운 열기
     worksButton.addEventListener('mouseenter', function(event) {
         event.preventDefault();
-        event.stopPropagation(); // 이 이벤트가 document로 전달되지 않도록 함
-        toggleDropdown(); // 드롭다운 메뉴를 토글
+        dropdownContent.classList.add('show'); // 드롭다운 메뉴를 표시
+    });
+
+    // 드롭다운 닫기
+    worksButton.addEventListener('mouseleave', function(event) {
+        // 마우스가 버튼에서 나갔을 때 드롭다운이 사라지도록 설정
+        dropdownContent.classList.remove('show');
+    });
+
+    // 드롭다운 메뉴에 마우스를 올렸을 때 드롭다운 유지
+    dropdownContent.addEventListener('mouseenter', function(event) {
+        dropdownContent.classList.add('show'); // 드롭다운 유지
+    });
+
+    // 드롭다운 메뉴에서 마우스가 벗어나면 드롭다운 닫기
+    dropdownContent.addEventListener('mouseleave', function(event) {
+        dropdownContent.classList.remove('show'); // 드롭다운 닫기
     });
 
     // 드롭다운 외부 클릭 시 닫기
-    document.addEventListener('mouseleave', function(event) {
-        // worksButton이나 dropdownContent를 클릭하지 않은 경우 메뉴를 닫음
+    document.addEventListener('click', function(event) {
         if (!worksButton.contains(event.target) && !dropdownContent.contains(event.target)) {
-            dropdownContent.classList.remove('show'); // 메뉴 닫기
+            dropdownContent.classList.remove('show'); // 외부 클릭 시 메뉴 닫기
         }
     });
 });
+
+
 
 // 모바일 메뉴바 드롭다운
 document.addEventListener("DOMContentLoaded", function () {
