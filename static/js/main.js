@@ -57,14 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 드롭다운 열기/닫기 기능 제어
-    worksButton.addEventListener('click', function(event) {
+    worksButton.addEventListener('mouseenter', function(event) {
         event.preventDefault();
         event.stopPropagation(); // 이 이벤트가 document로 전달되지 않도록 함
         toggleDropdown(); // 드롭다운 메뉴를 토글
     });
 
     // 드롭다운 외부 클릭 시 닫기
-    document.addEventListener('click', function(event) {
+    document.addEventListener('mouseleave', function(event) {
         // worksButton이나 dropdownContent를 클릭하지 않은 경우 메뉴를 닫음
         if (!worksButton.contains(event.target) && !dropdownContent.contains(event.target)) {
             dropdownContent.classList.remove('show'); // 메뉴 닫기
@@ -79,12 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeIcon = document.getElementById('close-icon');
     const animationDuration = 500; // 애니메이션 지속 시간 (500ms)
 
-    menuIcon.addEventListener('click', function () {
+    menuIcon.addEventListener('mouseenter', function () {
         mobileMenu.style.visibility = 'visible'; // 먼저 visibility를 visible로 설정
         mobileMenu.classList.add('show'); // 애니메이션 시작
     });
 
-    closeIcon.addEventListener('click', function () {
+    closeIcon.addEventListener('mouseleave', function () {
         mobileMenu.classList.remove('show'); // 애니메이션 숨기기 시작
 
         // 애니메이션이 끝난 후 visibility를 hidden으로 설정
