@@ -90,12 +90,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeIcon = document.getElementById('close-icon');
     const animationDuration = 500; // 애니메이션 지속 시간 (500ms)
 
-    menuIcon.addEventListener('mouseenter', function () {
+    menuIcon.addEventListener('click', function () {
         mobileMenu.style.visibility = 'visible'; // 먼저 visibility를 visible로 설정
         mobileMenu.classList.add('show'); // 애니메이션 시작
     });
 
-    closeIcon.addEventListener('mouseleave', function () {
+    closeIcon.addEventListener('click', function () {
         mobileMenu.classList.remove('show'); // 애니메이션 숨기기 시작
 
         // 애니메이션이 끝난 후 visibility를 hidden으로 설정
