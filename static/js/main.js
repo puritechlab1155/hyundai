@@ -117,17 +117,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // 모바일에서 WORKS 클릭시 토글 
 
-document.addEventListener("DOMContentLoaded", function () {
-    function toggleDropdown(event) {
-        event.preventDefault(); // 기본 링크 클릭 동작 막기
-        var dropdown = document.getElementById('dropdownMenu');
-        if (dropdown.style.display === 'block') {
-            dropdown.style.display = 'none';
-        } else {
-            dropdown.style.display = 'block';
-        }
+
+// function toggleDropdown(event) {
+//     const dropdownMenu = document.getElementById('dropdownMenu');
+    
+//     if (dropdownMenu.style.display === 'block') {
+//         dropdownMenu.style.display = 'none';
+//     } else {
+//         dropdownMenu.style.display = 'block';
+//     }
+// }
+
+
+function toggleDropdown(event) {
+    const dropdown = document.getElementById('dropdownMenu');
+
+    if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+    } else {
+        dropdown.classList.add('show');
     }
-});
+}
+
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // 모든 footer-container 요소들을 선택

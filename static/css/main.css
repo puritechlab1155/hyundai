@@ -87,17 +87,10 @@ header .header-back {display: none;}
 header .logo {font-size: 24px; font-weight: bold; display: block !important;}
 header nav { height: auto; }
 header nav ul { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
-header nav ul li { margin-right: 40px; max-width: 68px; box-sizing: border-box; text-align: center; }
+header nav ul li { margin-right: 40px;  box-sizing: border-box; text-align: center; }
 header nav ul li:last-child { margin-right: 0px; }
-
-/* header nav ul li a { text-decoration: none; color: #101010; font-size: 20px; font-weight: 400;  transition: all 0.3s ease; /* 부드러운 전환 */
-/* header nav ul li a:hover { font-weight: 600; } */ 
-/* transition: font-weight 0.2s ease, transform 0.2s ease; */
-
 header nav ul li a { text-decoration: none; color: #101010; letter-spacing: 0.36px; font-size: 20px;   transition: transform 0.2s ease, font-weight 0.2s ease;}
 header nav ul li a:hover { font-weight: 600; transform: scale(1.05);  text-shadow: 0.1px 0.5px 0.1px rgba(0, 0, 0, 0.3);}
-
-
 
 
 header .desktop-nav { position: absolute; right: 80px;}
@@ -125,45 +118,15 @@ header .dropdown-content a {
     display: block;
 }
 
-header .dropdown-content a:hover {background-color: #f1f1f1;}
-header .dropdown-content.show {display: flex;}
-
-/* __________________________ */
-header .dropdown-content-mo {
-    display: none;
-    position: absolute;
-    background-color: white;
-    z-index: 30;
-    flex-direction: column;
-    text-align: left;
-    width: 100%; 
-    max-width: 165px;
-}
-
-
-/* 드롭다운 내부 링크 스타일 */
-header .dropdown-content-mo a {
+header .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-/* 링크에 마우스를 올렸을 때 스타일 */
-header .dropdown-content-mo a:hover {
-    background-color: #f1f1f1;
-}
-
-/* 드롭다운 버튼 스타일 */
-header .dropbtn:hover  {
-    display: block;
-    color: black;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: block;
-}
-
-
+header .dropdown-content a:hover {background-color: #f1f1f1;}
+header .dropdown-content.show {display: flex;}
 
 
 
@@ -251,7 +214,6 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
     header .menu-icon {display: block; font-size: 30px;}
     header .desktop-nav {display: none;}
 
-
     header .mobile-menu {
         position: fixed;
         top: 0;
@@ -282,9 +244,47 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
 
     header .mobile-menu-header img { height: 40px;}
     header .mobile-menu .mobile-menu-header .close-icon {font-size: 28px; cursor: pointer; margin-right:20px;}
+
+    /* 여기서 부터 */
     header .mobile-menu nav ul {list-style: none; padding: 0;display: block;}
-    header .mobile-menu nav ul li {margin: 40px 24px;}
+    header .mobile-menu nav ul li { margin: 40px 24px; text-align: left;}
     header .mobile-menu nav ul li a {text-decoration: none;color: black; font-size: 28px;}
+    header .mobile-menu nav ul li p {text-decoration: none;color: black; font-size: 28px;}
+
+    /* __________________________*/
+    header .mobile-menu nav ul li .dropdown-content-mo {
+        display: none;
+        /* position: absolute; */
+        /* background-color: white; */
+        z-index: 30;
+        flex-direction: column;
+        text-align: left;
+        height: auto;
+    }
+
+    header .mobile-menu nav ul li .dropdown-content-mo.show {
+        display: flex; /* 드롭다운이 보일 때 flex로 공간 차지 */
+    }
+
+    /* 드롭다운 내부 링크 스타일 */
+    header .mobile-menu nav ul li .dropdown-content-mo a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        font-size: 28px;
+    }
+
+    /* 링크에 마우스를 올렸을 때 스타일 */
+    header .mobile-menu nav ul li .dropdown-content-mo a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropbtn {
+        cursor: pointer;
+    }
+    
+
+
     header .mobile-menu .search-container {display: flex; margin-left:  21px;border-radius: 25px; width: 85%; /* 너비를 길게 설정 */}
     header .mobile-menu .search-container input {
         padding: 20px;
