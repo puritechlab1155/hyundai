@@ -297,6 +297,7 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
         font-size: 25px;
         margin-left: 20px;
         border-bottom: 0.5px solid #ccc;
+        padding-top: 10px;
     }
 
     /* 링크에 마우스를 올렸을 때 스타일 */
