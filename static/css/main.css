@@ -313,7 +313,7 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
 
     /* search-container-mo */
     .search-container-pc { display: none;}
-    header .mobile-menu .search-container {display: flex; margin-left: 0 24px; border-radius: 25px; width: 85%; /* 너비를 길게 설정 */}
+    header .mobile-menu .search-container {display: flex; margin: 0 24px; border-radius: 25px; width: 85%; /* 너비를 길게 설정 */}
     header .mobile-menu .search-container input {
         padding: 20px;
         font-size: 20px;
