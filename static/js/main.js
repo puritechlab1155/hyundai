@@ -115,7 +115,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// 모바일에서 WORKS 클릭시 토글 
 
+document.addEventListener("DOMContentLoaded", function () {
+    function toggleDropdown(event) {
+        event.preventDefault(); // 기본 링크 클릭 동작 막기
+        var dropdown = document.getElementById('dropdownMenu');
+        if (dropdown.style.display === 'block') {
+            dropdown.style.display = 'none';
+        } else {
+            dropdown.style.display = 'block';
+        }
+    }
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     // 모든 footer-container 요소들을 선택
