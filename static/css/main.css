@@ -128,6 +128,29 @@ header .dropdown-content a {
 header .dropdown-content a:hover {background-color: #f1f1f1;}
 header .dropdown-content.show {display: flex;}
 
+.search-container-pc {display: flex; margin: 0 80px 0 76vw; border-radius: 25px; width: 20%; }
+.search-container-pc input {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    outline: none;
+    background-color:#fafafa;
+    flex: 1; /* 남은 공간을 차지하도록 설정 */
+}
+.search-container-pc button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    background-color: #fafafa;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: pointer;
+}
+.search-container-pc button:hover { background-color: #ddd;}
+
+
 
 
 /* footer pc*/
@@ -245,17 +268,14 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
     header .mobile-menu-header img { height: 40px;}
     header .mobile-menu .mobile-menu-header .close-icon {font-size: 28px; cursor: pointer; margin-right:20px;}
 
-    /* 여기서 부터 */
+    /* 여기서 부터 수정 추가*/
     header .mobile-menu nav ul {list-style: none; padding: 0;display: block;}
     header .mobile-menu nav ul li { margin: 40px 24px; text-align: left;}
     header .mobile-menu nav ul li a {text-decoration: none;color: black; font-size: 28px;}
     header .mobile-menu nav ul li p {text-decoration: none;color: black; font-size: 28px;}
 
-    /* __________________________*/
     header .mobile-menu nav ul li .dropdown-content-mo {
         display: none;
-        /* position: absolute; */
-        /* background-color: white; */
         z-index: 30;
         flex-direction: column;
         text-align: left;
@@ -282,9 +302,12 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
     .dropbtn {
         cursor: pointer;
     }
-    
 
+    /* search-container-pc */
+    /* .search-container-pc { } */
 
+    /* search-container-mo */
+    .search-container-pc { display: none;}
     header .mobile-menu .search-container {display: flex; margin-left:  21px;border-radius: 25px; width: 85%; /* 너비를 길게 설정 */}
     header .mobile-menu .search-container input {
         padding: 20px;
@@ -579,7 +602,7 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
 }
 
 /* work-list */
-.work-list { padding: 120px 20px 40px; position: relative; width: 100%; }
+.work-list { padding: 80px 20px 40px; position: relative; width: 100%; }
 .work-list .cont_wrap { width: 95%; margin: 0 auto; }
 .work-list .cont_wrap ul { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; }
 .work-list .cont_wrap ul li { width: 100%; overflow: visible; position: relative; z-index: 0; }

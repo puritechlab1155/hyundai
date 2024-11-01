@@ -223,75 +223,87 @@ window.addEventListener('scroll', () => {
 });
 
 
-
-//각 페이지 메뉴 가로 스크롤
-// window.onload = function() {
-//     const categoryMenu = document.querySelector('.category-menu-wrapper');
-//     categoryMenu.scrollLeft = 100;  // 스크롤을 100px 만큼 이동
-// };
-
 //검색 시 검색 페이지로 로딩
 document.addEventListener('DOMContentLoaded', function() {
-    const searchButton = document.getElementById('search-button');
-    const searchInput = document.getElementById('search-input');
+    const searchButtons = [
+        document.getElementById('search-button-pc'),
+        document.getElementById('search-button-mobile')
+    ];
+    const searchInputs = [
+        document.getElementById('search-input-pc'),
+        document.getElementById('search-input-mobile')
+    ];
 
-    searchButton.addEventListener('click', function() {
-        const query = searchInput.value.trim().toLowerCase(); // 입력된 값 가져오기 및 소문자로 변환
+    searchButtons.forEach((button, index) => {
+        if (button) {
+            button.addEventListener('click', function() {
+                const query = searchInputs[index].value.trim().toLowerCase(); // 입력된 값 가져오기 및 소문자로 변환
 
-        if (query) {
-            let pageUrl = '';
+                if (query) {
+                    let pageUrl = '';
 
-            // 입력된 값에 따라 페이지 URL을 매핑
-            const pageMappings = {
-                'about': 'about.html',
-                '어바웃': 'about.html',
+                    // 입력된 값에 따라 페이지 URL을 매핑
+                    const pageMappings = {
+                        'about': 'about.html',
+                        '어바웃': 'about.html',
 
-                'works': 'works_all_type.html',
-                '워크': 'works_all_type.html',
-                '워크 디테일': 'works_all_type.html',
-                '일': 'works_all_type.html',
+                        'works': 'works_all_type.html',
+                        '워크': 'works_all_type.html',
+                        '워크 디테일': 'works_all_type.html',
+                        '일': 'works_all_type.html',
 
-                'magazine': 'magazine.html',
-                '매거진': 'magazine.html',
-                '잡지': 'magazine.html',
+                        'magazine': 'magazine.html',
+                        '매거진': 'magazine.html',
+                        '메거진': 'magazine.html',
+                        '잡지': 'magazine.html',
 
-                'editorial': 'editorial.html',
-                '에디토리얼': 'editorial.html',
-                '편집': 'editorial.html',
+                        'editorial': 'editorial.html',
+                        '에디토리얼': 'editorial.html',
+                        '에디털': 'editorial.html',
+                        '편집': 'editorial.html',
 
-                'goods': 'goods.html',
-                '굿즈': 'goods.html',
-                '굿스': 'goods.html',
-                '상품': 'goods.html',
+                        'goods': 'goods.html',
+                        '굿즈': 'goods.html',
+                        '굿스': 'goods.html',
+                        '굿': 'goods.html',
+                        '상품': 'goods.html',
 
-                'promotion': 'promotion.html',
-                '프로모션': 'promotion.html',
-                '광고': 'promotion.html',
+                        'promotion': 'promotion.html',
+                        '프로모션': 'promotion.html',
+                        '광고': 'promotion.html',
 
-                'information': 'information.html',
-                '정보': 'information.html',
+                        'information': 'information.html',
+                        '인포메이션': 'information.html',
+                        '인포': 'information.html',
+                        '정보': 'information.html',
 
-                'contact': 'contact.html',
-                '컨택트': 'contact.html',
-                '연락하기': 'contact.html',
-                '회사': 'contact.html',
-                '연락처': 'contact.html',
-                '연락': 'contact.html'
-                // 필요한 경우 더 많은 매핑 추가 가능
-            };
+                        'contact': 'contact.html',
+                        '컨택트': 'contact.html',
+                        '연락하기': 'contact.html',
+                        '회사': 'contact.html',
+                        '연락처': 'contact.html',
+                        '연락': 'contact.html'
+                        // 필요한 경우 더 많은 매핑 추가 가능
+                    };
 
-            // 입력된 값에 대응하는 페이지 URL을 가져옴
-            pageUrl = pageMappings[query];
+                    // 입력된 값에 대응하는 페이지 URL을 가져옴
+                    pageUrl = pageMappings[query];
 
-            if (pageUrl) {
-                // 해당 페이지로 이동
-                window.location.href = pageUrl;
-            } else {
-                alert('해당 페이지를 찾을 수 없습니다.');
-            }
+                    if (pageUrl) {
+                        // 해당 페이지로 이동
+                        window.location.href = pageUrl;
+                    } else {
+                        alert('해당 페이지를 찾을 수 없습니다.');
+                    }
+                }
+            });
         }
     });
 });
+
+
+
+
 
 //hyundai_art 메인 모.바.일 화면에서만 로고가 보이도록
 document.addEventListener('DOMContentLoaded', function() {
