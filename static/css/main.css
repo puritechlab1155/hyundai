@@ -85,15 +85,18 @@ header {
 header .header-back {display: none;}
 
 header .logo {font-size: 24px; font-weight: bold; display: block !important;}
-header nav { height: auto; }
+/* header nav { height: auto; } */
 header nav ul { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
-header nav ul li { margin-right: 40px;  box-sizing: border-box; text-align: center; }
+header nav ul li { margin-right: 40px; text-align: center; }
 header nav ul li:last-child { margin-right: 0px; }
+/* header nav ul li a { text-decoration: none; color: #101010; letter-spacing: 0.36px; font-size: 20px; } */
 header nav ul li a { text-decoration: none; color: #101010; letter-spacing: 0.36px; font-size: 20px;   transition: transform 0.2s ease, font-weight 0.2s ease;}
+/* header nav ul li a:hover { font-weight: 600; } */
 header nav ul li a:hover { font-weight: 600; transform: scale(1.05);  text-shadow: 0.1px 0.5px 0.1px rgba(0, 0, 0, 0.3);}
 
 
 header .desktop-nav { position: absolute; right: 80px;}
+header .desktop-nav ul .business { border: 1px solid rgb(96, 94, 94); padding: 8px;}
 
 /* header dropdown */
 header .mobile-menu { visibility: hidden;}
