@@ -269,7 +269,7 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
     }
 
     header .mobile-menu-header img { height: 40px;}
-    header .mobile-menu .mobile-menu-header .close-icon {font-size: 28px; cursor: pointer; margin-right:20px;}
+    header .mobile-menu .mobile-menu-header .close-icon {font-size: 28px; cursor: pointer; }
 
     /* 여기서 부터 수정 추가*/
     header .mobile-menu nav ul {list-style: none; padding: 0;display: block;}
@@ -313,7 +313,7 @@ main .video-container .video-overlay .mobile-border-bt { display: none;}
 
     /* search-container-mo */
     .search-container-pc { display: none;}
-    header .mobile-menu .search-container {display: flex; margin-left:  21px;border-radius: 25px; width: 85%; /* 너비를 길게 설정 */}
+    header .mobile-menu .search-container {display: flex; margin-left: 0 24px; border-radius: 25px; width: 85%; /* 너비를 길게 설정 */}
     header .mobile-menu .search-container input {
         padding: 20px;
         font-size: 20px;
