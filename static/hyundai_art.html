@@ -31,24 +31,31 @@
 
     <header>
         <div class="logo_main"><a href="hyundai_art.html"><img src="images/common/main-logo.png" alt="로고"></a></div>
-        <nav class="desktop-nav">
-            <ul>
-                <li class="business"><a href="./images/현대아트컴 사업소개서.pdf" download="사업소개서.pdf">사업소개서</a></li>
-                <li><a>NOTICE</a></li>
-                <li><a href="./about.html">ABOUT</a></li>
-                <li class="dropdown">
-                    <a href="./works_all_type.html" id="works-button">WORKS</a>
-                    <div class="dropdown-content">
-                        <a href="works_all_type.html">ALL TYPE</a>
-                        <a href="magazine.html">MAGAZINE</a>
-                        <a href="editorial.html">EDITORIAL</a>
-                        <a href="goods.html">GOODS</a>
-                        <a href="promotion.html">PROMOTION</a>
-                        <a href="information.html">INFORMATION</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+        <div class="gnb-box">
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a>NOTICE</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a href="./works_all_type.html" id="works-button">WORKS</a>
+                        <div class="dropdown-content">
+                            <a href="works_all_type.html">ALL TYPE</a>
+                            <a href="magazine.html">MAGAZINE</a>
+                            <a href="editorial.html">EDITORIAL</a>
+                            <a href="goods.html">GOODS</a>
+                            <a href="promotion.html">PROMOTION</a>
+                            <a href="information.html">INFORMATION</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <section class="search-container-pc">
+                <input type="text" id="search-input-pc" placeholder="">
+                <button id="search-button-pc"><img src="images/common/Search.png" alt="검색"></button>
+            </section>
+        </div>
+
+
 
         <div class="menu-icon" id="menu-icon">&#9776;</div>
    
@@ -84,23 +91,23 @@
     </header>
 
     <main class="pop-up">
-
-        <div class="video-container">
-            <video class="responsive-video" autoplay muted loop playsinline>
-                <source src="vedio/사막.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="video-overlay">
-                <div></div>
-                <div>
-                    <h1>지성과 창의,<br>그리고 경계를 넘어</h1>
-                    <div class="mobile-border-bt"></div>
-                    <p>지성과 창의, 그 경계를 넘어 발전하고자 전진하는<br class="mobile-overlay"> 현대아트컴으로 안내합니다.</p>
-                </div>
-            </div>
+        <div class="visual-container">
+            <img src="images/main/main-visual1.jpg" alt="메인비주얼1">
+            <img src="images/main/main-visual2.jpg" alt="메인비주얼2">
+            <img src="images/main/main-visual3.jpg" alt="메인비주얼3">
+            <img src="images/main/main-visual4.jpg" alt="메인비주얼4">
         </div>
-
-        
+        <section class="section-content">
+            <picture class="section-img">
+                <source srcset="images/main/contentM.jpg" media="(max-width: 767px)" />
+                <img src="images/main/content.jpg" alt="컨텐츠 이미지" />
+              </picture>
+            <div>
+                <p class="section-text">현대아트컴은 고유명사가 아니라 고유동사입니다.<br/>
+                    머물러 있는 '이다'(BEING)가 아니라 <br/>항해 가는 '하다(DOING)'입니다.
+                </p>
+            </div>
+        </section>
     </main>
 
     <div class="modal_area" id="modal-area">
@@ -117,7 +124,7 @@
         </div>
     </div>
 
-    <div class="btn_box">
+    <!-- <div class="btn_box">
         <div class="top_btn">
             <button onclick="topFunction()"><i class="fa-solid fa-chevron-up"></i></button>
             <script>
@@ -133,7 +140,8 @@
         <div class="contact-us">
             <a href="contact.html"><img class="rotating-image" src="images/common/contact-us.png"></a>
         </div>
-    </div><!--btn_box  -->
+    </div> -->
+    <!--btn_box  -->
 
         <!-- footer.html -->
     <div id="footer-container"></div>

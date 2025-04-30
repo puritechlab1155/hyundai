@@ -353,32 +353,53 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// 메인비주얼 자동재생
+const images = document.querySelectorAll('.visual-container img');
+  let current = 0;
+
+  function showNextImage() {
+    images.forEach((img, i) => {
+      img.classList.remove('active');
+      if (i === current) {
+        img.classList.add('active');
+      }
+    });
+
+    current = (current + 1) % images.length;
+  }
+
+  // 처음 이미지 보여주기
+  showNextImage();
+
+  // 2초마다 다음 이미지로 전환
+  setInterval(showNextImage, 2000);
+
 
 //pop-up 창
-document.addEventListener("DOMContentLoaded", function () {
-    const popUpElements = document.querySelectorAll('.pop-up');
+//document.addEventListener("DOMContentLoaded", function () {
+    // const popUpElements = document.querySelectorAll('.pop-up');
 
-    function handleScroll() {
-        popUpElements.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            const elementTop = rect.top;
-            const elementBottom = rect.bottom;
+    // function handleScroll() {
+    //     popUpElements.forEach(el => {
+    //         const rect = el.getBoundingClientRect();
+    //         const elementTop = rect.top;
+    //         const elementBottom = rect.bottom;
 
             // 요소가 화면에 보이기 시작하는 조건
-            if (elementTop < window.innerHeight && elementBottom > 0) {
-                el.classList.add('show');
-            } else {
-                el.classList.remove('show');
-            }
-        });
-    }
+    //         if (elementTop < window.innerHeight && elementBottom > 0) {
+    //             el.classList.add('show');
+    //         } else {
+    //             el.classList.remove('show');
+    //         }
+    //     });
+    // }
 
     // 스크롤할 때마다 함수 실행
-    window.addEventListener('scroll', handleScroll);
+    // window.addEventListener('scroll', handleScroll);
 
     // 페이지 로드 시 요소가 이미 보이는지 체크
-    handleScroll();
-});
+    // handleScroll();
+// });
 
 
 // // 메인 팝업 창
