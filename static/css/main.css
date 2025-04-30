@@ -235,13 +235,13 @@ footer .info-btn {
     background-color: #00a0e9;
 }
 .info-btn:hover .download-icon {
-    content: url("/images/common/down-after.svg");
+    content: url("../images/common/down-after.svg");
 }
 .info-btn:hover .mail-icon {
-    content: url("/images/common/mail-after.svg");
+    content: url("../images/common/mail-after.svg");
 }
 .info-btn:hover .call-icon {
-    content: url("/images/common/call-after.svg");
+    content: url("../images/common/call-after.svg");
 }
 footer .icon-circle {
     position: absolute;
@@ -962,7 +962,7 @@ main {
 
 
 /* modal_area */
-.modal_area { width: 100%; height: 100%; position: fixed; left: 0; top: 0; background: rgba(0, 0, 0, 0.5); }
+.modal_area { width: 100%; height: 100%; position: fixed; left: 0; top: 0; background: rgba(0, 0, 0, 0.5); z-index: 10;}
 .modal_area .modal { width: fit-content; height: fit-content; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); }
 .modal_area .modal .img_box img { display: block; }
 .modal_area .modal .button_box { display: flex; width: 100%; cursor: pointer;}
